@@ -65,7 +65,9 @@ NODES:
 # Need to specify it if VPN will be used to access Cluster
 WAF_RULES:
     IPSETS:
-        - {"name": "us-031_Provider_236" , "cidr": "10.76.200.0/28"}
+        - {"name": "nu-subnet-public1-ap-southeast-2a" , "cidr": "10.0.0.0/20"}
+        - {"name": "nu-subnet-public2-ap-southeast-2b" , "cidr": "10.0.16.0/20"}
+        - {"name": "nu-subnet-public3-ap-southeast-2c" , "cidr": "10.0.32.0/20"}
 
 # If proxy server is ued to access AWS
 #SSH_PROXY: '87.254.212.120:8080'
@@ -77,12 +79,16 @@ WAF_RULES:
 # Access to EKS control plane
 KUBERNETES_API_ACCESS_RULES:
   IPSETS:
-      - {"name": "us-031_Provider_236" , "cidr": "10.76.200.0/28"}
+      - {"name": "nu-subnet-public1-ap-southeast-2a" , "cidr": "10.0.0.0/20"}
+      - {"name": "nu-subnet-public2-ap-southeast-2b" , "cidr": "10.0.16.0/20"}
+      - {"name": "nu-subnet-public3-ap-southeast-2c" , "cidr": "10.0.32.0/20"}
 
 # Access to ALB/EC2 nodes
 CLUSTER_SECURITY_GROUP_RULES:
   IPSETS:
-      - {"name": "us-031_Provider_236" , "cidr": "10.76.200.0/28"}
+      - {"name": "nu-subnet-public1-ap-southeast-2a" , "cidr": "10.0.0.0/20"}
+      - {"name": "nu-subnet-public2-ap-southeast-2b" , "cidr": "10.0.16.0/20"}
+      - {"name": "nu-subnet-public3-ap-southeast-2c" , "cidr": "10.0.32.0/20"}
 
 CREATE_PRIVATE_HOSTED_ZONE: "true"
 
