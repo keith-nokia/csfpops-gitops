@@ -114,3 +114,10 @@ EFS_ID: "nokia-aws-efs-id"
 
 #CALICO_ENABLED: true
 
+### BEGIN CSFPOPS MANAGED BLOCK ###
+CLUSTER_NAME: nokia-lab
+PLATFORM_NAME: nokia-lab
+INFRA_NAME: nokia-lab
+CLUSTER_TYPE: eks
+NO_CERT_MANAGER: false
+### END CSFPOPS MANAGED BLOCK ###
