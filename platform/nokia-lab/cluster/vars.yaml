@@ -86,9 +86,9 @@ CLUSTER_SECURITY_GROUP_RULES:
 
 CREATE_PRIVATE_HOSTED_ZONE: "true"
 
-KMS_S3_ARTIFACTS_KEY: "b9fbe18e-bb3b-4287-912a-9119409d3cea"
-KMS_CLUSTER_KEY: "b9fbe18e-bb3b-4287-912a-9119409d3cea"
-KMS_S3_CBUR_KEY: "b9fbe18e-bb3b-4287-912a-9119409d3cea"
+KMS_S3_ARTIFACTS_KEY: "ecfc76f9-0228-4bec-8035-7471492649d6"
+KMS_CLUSTER_KEY: "ecfc76f9-0228-4bec-8035-7471492649d6"
+KMS_S3_CBUR_KEY: "ecfc76f9-0228-4bec-8035-7471492649d6"
 
 ECR_ROOT_REPO: "nokia"
 HELM_S3_OBJECT: "charts"
@@ -98,7 +98,7 @@ DEFAULT_VOLUME_TYPE: gp3
 EBS_STORAGECLASS:
       - {name: "aws-ebs", default: true, fsType: "ext4", type: "gp2"}  # Do not change the name of this storage class 
       - {name: "aws-gp3-ext4", fsType: "ext4", type: "gp3"}
-      - {name: "aws-gp3-cmk", fsType: "ext4", type: "gp3", kmsKeyId: "b9fbe18e-bb3b-4287-912a-9119409d3cea"} # Storage class encrypted with customer provided KMS
+      - {name: "aws-gp3-cmk", fsType: "ext4", type: "gp3", kmsKeyId: "ecfc76f9-0228-4bec-8035-7471492649d6"} # Storage class encrypted with customer provided KMS
       - {name: "aws-io1-ext4", fsType: "ext4", type: "io1"}
       - {name: "aws-io1-25-ext4", fsType: "ext4", type: "io1", iopsPerGB: "25"}
       - {name: "aws-io1-50-ext4", fsType: "ext4", type: "io1", iopsPerGB: "50"}
@@ -114,10 +114,3 @@ EFS_ID: "nokia-aws-efs-id"
 
 #CALICO_ENABLED: true
 
-### BEGIN CSFPOPS MANAGED BLOCK ###
-CLUSTER_NAME: nokia-lab
-PLATFORM_NAME: nokia-lab
-INFRA_NAME: nokia-lab
-CLUSTER_TYPE: eks
-NO_CERT_MANAGER: false
-### END CSFPOPS MANAGED BLOCK ###
