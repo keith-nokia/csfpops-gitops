@@ -53,9 +53,9 @@ NODES:
     DISK_SIZE: 100
     INSTANCE_TYPE: "m5a.4xlarge"
   EDGES:
-    DESIRED: 3
-#    MAX: 2
-#    MIN: 2
+    DESIRED: 2
+    MAX: 2
+    MIN: 2
     DISK_SIZE: 50
     INSTANCE_TYPE: "m5a.2xlarge"
   BASTION:
@@ -114,10 +114,3 @@ EFS_ID: "nokia-aws-efs-id"
 
 #CALICO_ENABLED: true
 
-### BEGIN CSFPOPS MANAGED BLOCK ###
-CLUSTER_NAME: nokia-lab
-PLATFORM_NAME: nokia-lab
-INFRA_NAME: nokia-lab
-CLUSTER_TYPE: eks
-NO_CERT_MANAGER: false
-### END CSFPOPS MANAGED BLOCK ###
