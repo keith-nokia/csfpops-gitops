@@ -2,28 +2,42 @@ INFRA: nokia-lab
 INVENTORY: nokia-lab
 INSTALL_MODE: OFFLINE
 DIRECTORY_MODE: true
+
+
+
 AVAILABILITY: GA
 BASE: csfp-base-1.21.1
 CAAS:
-  ALIAS: eks.1/k8s-1.21.2
-  APP_API: ncm-app-1.15.13-offline.tgz
-  AWS_EBS_CSI: aws-ebs-csi-driver-0.9.0.tgz
-  CITM: citm-ingress-1.18.21-offline.tgz
-  CUSTOMIZATIONS:
-    CHARTS:
-      - ncm-system-tune-1.0.10.tgz
-  EFS_PROVISIONER: efs-provisioner-0.13.2.tgz
-  GATEKEEPER: gatekeeper-3.7.0.tgz
-  GATEKEEPER_CONSTRAINTS: csf-gatekeeper-constraints-1.0.1.tgz
-  GATEKEEPER_LIBRARY: csf-gatekeeper-library-1.0.3.tgz
-  HELM_VERSION: 3.5.2
-  ISTIO: bcmt-istio-20.12.0-centos7.tgz
-  K8S_ADDONS: SAME_AS_CSFP_VERSION
-  VERSION: EKS-1.21
+    ALIAS: eks.1/k8s-1.21.2
+    APP_API: ncm-app-1.15.13-offline.tgz
+    AWS_EBS_CSI: aws-ebs-csi-driver-0.9.0.tgz
+    CITM: citm-ingress-1.18.21-offline.tgz
+    CUSTOMIZATIONS:
+        CHARTS:
+        - ncm-system-tune-1.0.10.tgz
+    EFS_PROVISIONER: efs-provisioner-0.13.2.tgz
+    GATEKEEPER: gatekeeper-3.7.0.tgz
+    GATEKEEPER_CONSTRAINTS: csf-gatekeeper-constraints-1.0.1.tgz
+    GATEKEEPER_LIBRARY: csf-gatekeeper-library-1.0.3.tgz
+    HELM_VERSION: 3.5.2
+    ISTIO: bcmt-istio-20.12.0-centos7.tgz
+    K8S_ADDONS: SAME_AS_CSFP_VERSION
+    VERSION: EKS-1.21
 VERSION: 21FP5PP1
-CORE_SERVICES_SUBDOMAINS: false
-CORE_SERVICES_SUBDOMAINS_BACK_COMP_ENABLED: true
-CREATE_WILDCARD_CNAME: false
-CAAS_PSP_ENABLED: false
+
+
+
+CORE_SERVICES_SUBDOMAINS: False
+CORE_SERVICES_SUBDOMAINS_BACK_COMP_ENABLED: True
+
+CREATE_WILDCARD_CNAME: False
+
+
+
+CAAS_PSP_ENABLED: False
+
 ADMINACCOUNT: nokia-lab-admin
 LOCAL_INSTALLER_PASSWORD: Friday123!
+
+PLATFORM_FQDN: "csfp.dev.software.nokia.com"
+INGRESS_FOR_OAM_SERVICES: "oam.csfp.dev.software.nokia.com"
