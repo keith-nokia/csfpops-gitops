@@ -1,1 +1,12 @@
-Œ~1G¶’-ÂÙÉÀpğ§Š-§ê¥{‡w€,å¾ÙûİT2´j»qŠãEûHÁŸétÆ]_‰’-¥›—2‚`âH…À®%Ó‚NØİß(Ğî	c’nqÁx…P¯Ñ#|X„ô3¦ââŒR°±¼Šá¢ââ«f›H®¯vO=Íuš“¦Mj7‘ô¯WèÜ}m|­;å_¬«‚2ÍêP\±Ò®œÿ²9×éWRĞz1[0§…yÄ–ßJi‡[xì­qG.y¹€™ÎØa^½Rpˆ•Æ˜¨{t`•—ŞE7 ~ˆã´rõÏ4âjÃƒy±…"ª®º„¦ù5Z&d2¡1%Y?†óYce]Kùá%rõv¨ú‘‚çÍUğì0ÛÆèäÅ€SXŞ	•…˜†Ò‚u	€ó·.·Ñ§Šs
+####################################
+### CSFPOPS GENERATED PARAMETERS ###
+####################################
+
+PACKAGE: s3://nokia-artifacts-ap-southeast-2/k8s-addons-1.0.25-offline.tgz
+
+IMPORTER_ARGUMENTS: "--upgrade --autoremove --watchTimeout 1800 --bin ./ncm --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
+
+
+REPOS:
+  - name: "s3-helm-repo"
+    url: "s3://nokia-artifacts-ap-southeast-2/charts"
