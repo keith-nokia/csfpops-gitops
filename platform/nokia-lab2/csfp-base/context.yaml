@@ -1,9 +1,0 @@
-# Can Be Overrided
-# CUSTOM_PACKAGE: XXX
-PACKAGE: "Handled by CsfpOps"
-
-REPOS:
-  - name: "s3-helm-repo"
-    url: "s3://nokia-artifacts-ap-southeast-2/charts"
-
-IMPORTER_ARGUMENTS: "--id csfp-base --upgrade --autoremove --watchTimeout 7200 --watchPeriod 120 --bin ./ncm --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia "
