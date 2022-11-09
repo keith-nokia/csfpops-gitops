@@ -9,7 +9,7 @@ EFS: "true"
 ## Deploy cluster auto-scaler feature
 AUTOSCALING: "false"
 
-## This role must be created manually only when csfpops will be called from EC2 instance 
+## This role must be created manually only when csfpops will be called from EC2 instance
 BASTION_IAM_ROLE: "service_ec2_bastion"
 ## Roles must be created manually
 NODE_IAM_ROLE: "service_ec2_eksnode"
@@ -31,16 +31,16 @@ CLUSTER_IAM_ROLE: "service_eks_cluster"
 #DNS_SUFFIX: "<NEED_TO_BE_FILLED>"
 
 VPC:
-  CIDR: 10.1.0.0/16
+  CIDR: 10.5.0.0/16
   SUBNETS:
     PRIVATE:
-      - 10.1.1.0/24
-      - 10.1.3.0/24
-      - 10.1.5.0/24
+      - 10.5.1.0/24
+      - 10.5.3.0/24
+      - 10.5.5.0/24
     PUBLIC:
-      - 10.1.0.0/24
-      - 10.1.2.0/24
-      - 10.1.4.0/24
+      - 10.5.0.0/24
+      - 10.5.2.0/24
+      - 10.5.4.0/24
 
 DNS_SUFFIX: "csfp.dev.software.nokia.com"
 S3_BUCKET: "nokia-artifacts-ap-southeast-2"
@@ -65,7 +65,8 @@ NODES:
 # Need to specify it if VPN will be used to access Cluster
 WAF_RULES:
     IPSETS:
-        - {"name": "nu-deploy-01" , "cidr": "13.237.183.33/32"}
+        - {"name": "nu-deploy-02" , "cidr": "13.236.1.93/32"}
+        - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
 
 # If proxy server is ued to access AWS
 #SSH_PROXY: '87.254.212.120:8080'
@@ -77,12 +78,14 @@ WAF_RULES:
 # Access to EKS control plane
 KUBERNETES_API_ACCESS_RULES:
   IPSETS:
-      - {"name": "nu-deploy-01" , "cidr": "13.237.183.33/32"}
+      - {"name": "nu-deploy-02" , "cidr": "13.236.1.93/32"}
+      - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
 
 # Access to ALB/EC2 nodes
 CLUSTER_SECURITY_GROUP_RULES:
   IPSETS:
-      - {"name": "nu-deploy-01" , "cidr": "13.237.183.33/32"}
+      - {"name": "nu-deploy-02" , "cidr": "13.236.1.93/32"}
+      - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
 
 #CREATE_PRIVATE_HOSTED_ZONE: "true"
 
@@ -96,7 +99,7 @@ HELM_S3_OBJECT: "charts"
 DEFAULT_VOLUME_TYPE: gp2
 
 #EBS_STORAGECLASS:
-#      - {name: "aws-ebs", default: true, fsType: "ext4", type: "gp2"}  # Do not change the name of this storage class 
+#      - {name: "aws-ebs", default: true, fsType: "ext4", type: "gp2"}  # Do not change the name of this storage class
 #      - {name: "aws-gp3-ext4", fsType: "ext4", type: "gp3"}
 #      - {name: "aws-gp3-cmk", fsType: "ext4", type: "gp3", kmsKeyId: "ecfc76f9-0228-4bec-8035-7471492649d6"} # Storage class encrypted with customer provided KMS
 #      - {name: "aws-io1-ext4", fsType: "ext4", type: "io1"}
@@ -115,10 +118,3 @@ DEFAULT_VOLUME_TYPE: gp2
 CALICO_ENABLED: false
 
 SKIP_TAGS: "selinux,cis,calico"
-### BEGIN CSFPOPS MANAGED BLOCK ###
-CLUSTER_NAME: nokia-lab
-PLATFORM_NAME: nokia-lab
-INFRA_NAME: nokia-lab
-CLUSTER_TYPE: eks
-NO_CERT_MANAGER: false
-### END CSFPOPS MANAGED BLOCK ###

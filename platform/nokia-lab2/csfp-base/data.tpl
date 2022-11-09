@@ -13,7 +13,7 @@ TESTLDAP_ENABLED: false
 
 ### BEGIN EKS PARAMETERS ###
 EKS_INSTALL: true
-NODES_CIDRS: ['10.1.1.0/24', '10.1.3.0/24', '10.1.5.0/24']
+NODES_CIDRS: ['10.5.1.0/24', '10.5.3.0/24', '10.5.5.0/24']
 K8S_API_SERVER_ENDPOINT: "csfpops will automatically discover and inject through common_data.tpl"
 ES_FLUENTD_DOCKER_CONTAINERS_PATH: "/var/lib/docker/"
 CSKM:
