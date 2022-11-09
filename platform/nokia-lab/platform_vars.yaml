@@ -35,3 +35,6 @@ CREATE_WILDCARD_CNAME: False
 
 
 CAAS_PSP_ENABLED: False
+PROFILES_LIST: 
+ - uiv_csf_profile 
+   
