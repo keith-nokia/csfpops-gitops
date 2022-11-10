@@ -1,2 +1,8 @@
-Œ sØòDUBÙÉÀ›ŽvÍ*Û´wÚôšggíoÔ¦ô:ßë¢5¯yÒüV— ¼Ì{4ÓýìCß¢Œ0²Ãß‹¹Ce…‡ö¯Þ²÷Gv#ÌÃ<.«ænªŽ¬¢’Bã*¬SN²ƒ@›Ù³Õ›îÌï4ñÆMã.ÙÕù…3€µí@èß6
-¹¯_ö÷‘ì3:¢U›*´NYö´ï…õJ˜ºv·]U«»®V€dÂ¼ßCÝ·Ë¼ìTÂuaUœ5w+Ã;lçdEWjv!ÈÉ;º,??~*‡û›RøØ±÷‘£=þ»£Zº¼®â×*[è3zýp½Dó`²1;­“Á^Ò½ù:j#9™ÖÉ[<kçÁýüwd÷©ÂÆªœÁûÁ„;®Qñ%ÎM¹„³8®vØ‚®vÐÃÊ³"<®ÊLN–K—÷ÔHcC¸ÜÂ’Ê“Bz±] ž
+PACKAGE: file:///opt/.paasrc/uiv_csf_profile_offline-22.9.0-28.tgz
+
+CONTEXT_USER: nokialab-admin
+CONTEXT_PASSWORD: Friday123!
+CONTEXT_PROJECT: nbn-project
+#IMPORTER_ARGUMENTS: --bin ./ncm --id uiv_csf_profile --instantiate --watchTimeout 1800 --hpush --debug
+#IMPORTER_ARGUMENTS: --bin ./ncm --id uiv_csf_profile --instantiate --hpush --debug --dregistry  965352574229.dkr.ecr.us-east-1.amazonaws.com/nokia
+IMPORTER_ARGUMENTS: --upgrade --watchTimeout 1800 --bin ./ncm --project nbn-project --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
