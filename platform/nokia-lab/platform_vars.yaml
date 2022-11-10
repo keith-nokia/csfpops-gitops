@@ -37,4 +37,4 @@ CREATE_WILDCARD_CNAME: False
 CAAS_PSP_ENABLED: False
 PLATFORM_FQDN: nokia-lab.csfp.dev.software.nokia.com
 INGRESS_FOR_OAM_SERVICES: nokia-lab.csfp.dev.software.nokia.com
-
+LOCAL_INSTALLER_PASSWORD: Friday123!
