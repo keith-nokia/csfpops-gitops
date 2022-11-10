@@ -6,6 +6,7 @@ K8S_DASHBOARD_NAMESPACE: kube-system
 
 # CBUR
 CBUR_BACKEND_TYPE: "AWSS3"
+AWSS3_ENCRYPTION: "sse-kms"
 
 
 # CertIssuer
