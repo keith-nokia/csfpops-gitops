@@ -63,7 +63,7 @@ UIV_TIMEZONE: Asia/Kolkata
 # Set to true if KEYCLOAK_REALM is to be created by UIV installation
 # When CREATE_REALM: true, realm with given name, admin user and password will be created. CHANGE VALUES IF REQUIRED
 # When CREATE_REALM: false, name of an existing realm, realm admin username and realm admin password must be provided. CHANGE VALUES IF REQUIRED
-CREATE_REALM: false
+CREATE_REALM: true
 KEYCLOAK_REALM: ap-core
 # base64 encoded values to be set for keycloak admin user. CHANGE VALUES IF REQUIRED
 KEYCLOAK_ADMIN_USR: dWl2dXNlcjE=
@@ -73,10 +73,10 @@ KEYCLOAK_ADMIN_USR: dWl2dXNlcjE=
 KEYCLOAK_ADMIN_SECRET: nbn-uiv-keycloak-config-csf-ckey-realm
 # Keycloak admin secret user key. CHANGE VALUES WHEN CREATE_REALM: false
 # NOTE: DO NOT MODIFY THIS PARAMETER WHEN CREATE_REALM: true
-KEYCLOAK_ADMIN_USR_KEY: 'uivuser1'
+KEYCLOAK_ADMIN_USR_KEY: 'user'
 # Keycloak admin secret password key. CHANGE VALUES WHEN CREATE_REALM: false
 # NOTE: DO NOT MODIFY THIS PARAMETER WHEN CREATE_REALM: true
-KEYCLOAK_ADMIN_PWD_KEY: 'Nokia@1231'
+KEYCLOAK_ADMIN_PWD_KEY: 'password'
 
 # Set to true if KEYCLOAK_REALM is to be deleted by UIV un-installation
 # NOTE: APPLICABLE ONLY FOR UIV UN-INSTALLATION IN OCP ENVIRONMENT
