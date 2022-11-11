@@ -1,8 +1,1 @@
-PACKAGE: file:///opt/.paasrc/uiv_csf_profile_offline-22.9.0-28.tgz
-
-CONTEXT_USER: nokialab-admin
-CONTEXT_PASSWORD: Friday123!
-CONTEXT_PROJECT: nbn-project
-#IMPORTER_ARGUMENTS: --bin ./ncm --id uiv_csf_profile --instantiate --watchTimeout 1800 --hpush --debug
-#IMPORTER_ARGUMENTS: --bin ./ncm --id uiv_csf_profile --instantiate --hpush --debug --dregistry  965352574229.dkr.ecr.us-east-1.amazonaws.com/nokia
-IMPORTER_ARGUMENTS: --upgrade --watchTimeout 1800 --bin ./ncm --project nbn-project --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
+Œ*6²ä£'(ÛÉÀ™Ÿ¯…vQã»¤Aœ¸ˆ)ðlebÍtAÏÇo¨[2œéˆÚ€hÍ/«ñýÁ9>†þÛH+Ót68Îª˜G¯?<­Áˆ’çÑõG÷JG¡Å§x‰É‰§ƒ^,%<91®×}gZïSþP»ÓõŠ$¨Ö Uhàek™:¨[Ë«[(~©…'ÌS+’n!îçŒ[¼Vãý¯JÇi!+‹)-2ŒŸvOáÔòÔ`kr^Þ~³"®ˆ"±£?@LŽ‡óé²q¶î¸‹:ô=m:DœÙPºf÷2³ÿvõß "‰Öø¸¦t‰hZ¨'¡m&æ¼xËÿ(¥fÌŠÕ3)£éLµ_ûjB–øvLÁ0ò‡kcåMÝ!ìÆä€Då<T—t÷Ð†<3Î‰]dÒ€ý¡€0g]ë`8ÃY¾v#ÚÇš†k´_wlƒZ[©©Îä†5'‡F
