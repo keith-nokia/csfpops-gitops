@@ -13,11 +13,11 @@ UIV_ENV: CSFP
 PRODUCT_NAME: "Digital Operations Center"
 
 # CSFP / OCP Project where UIV is to be installed
-PROJECT: nbn-project
+PROJECT: "nbn-project"
 
 # Kubernetes namespace where UIV is to be installed
 # Note: PROJECT & NAMESPACE will be same for OCP deployments
-NAMESPACE: nbn-uiv
+NAMESPACE: "nbn-uiv"
 
 # Note: DEFAULT value for CPRO_NAMESPACE in CSFP is paas.
 # Note: CHANGE CPRO_NAMESPACE for OCP deployments accordingly.
@@ -41,7 +41,11 @@ KEYCLOAK_MASTER_REALM_PWD: CHANGE_THIS
 # Docker registry to pull or push images.
 # In CSFP, specify the value as "HARBOR"
 # In OCP, specify docker registry path.
-DOCKER_REGISTRY: HARBOR
+DOCKER_REGISTRY: "HARBOR"
+
+HELM_REPOS:
+  - name: "s3-helm-repo"
+    url: "s3://nokia-artifacts-ap-southeast-2/charts"
 
 # Kong 5.x configuration
 # This parameter should be false if UIV is deployed on CSFP FP3. Default is true.
