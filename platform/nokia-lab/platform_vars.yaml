@@ -27,4 +27,3 @@ CREATE_WILDCARD_CNAME: false
 CAAS_PSP_ENABLED: false
 LOCAL_INSTALLER_PASSWORD: Friday123!
 ADMINACCOUNT: superadmin
-INGRESS_FOR_OAM_SERVICES: nokia-lab.csfp.dev.software.nokia.com

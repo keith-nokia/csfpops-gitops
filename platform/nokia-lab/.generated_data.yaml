@@ -1,45 +1,5 @@
----
-DOMAIN_NAME: "nokia-lab.csfp.dev.software.nokia.com"
-DOMAIN_NAME_OAM: "nokia-lab.csfp.dev.software.nokia.com"
-
-CORE_SERVICES_SUBDOMAINS: False
-CORE_SERVICES_SUBDOMAINS_BACK_COMP_ENABLED: True
-
-NETWORK_STACK: ipv4_only
-
-
-
-K8S_API_SERVER_ENDPOINT: "https://9E804C39ABE4162CB0C0FA5EEB697C96.gr7.ap-southeast-2.eks.amazonaws.com"
-LCM_HELM: 3
-HELM_VERSION: 3
-RWX_STORAGE_CLASS: aws-efs
-RWO_STORAGE_CLASS: aws-ebs
-CBUR_STORAGECLASS: aws-ebs
-DEFAULT_SC_RWX: aws-efs
-DEFAULT_SC_RWX_BACKUP: aws-efs
-DEFAULT_SC_RWO: aws-ebs
-CA_ISSUER_NAME: ca-issuer
-IMAGE_REGISTRY: 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
-DOCKER_REGISTRY: 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
-
-LOCAL_INSTALLER_PASSWORD: "Friday123!"
-
-ADMINACCOUNT: "superadmin"
-
-CSFP_PLAYBOOK_IMAGE_REGISTRY: "126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
-CSFP_ADDONS_IMAGE_REGISTRY: "126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
-
-## DATA INJECTED FOR AF
-CLUSTER_ENDPOINT: "nokia-lab.csfp.dev.software.nokia.com"
-COMPAAS_FQDN: "nokia-lab.csfp.dev.software.nokia.com"
-CSFP_FQDN: "nokia-lab.csfp.dev.software.nokia.com"
-COMPAAS_INGRESS_FQDN: "nokia-lab.csfp.dev.software.nokia.com"
-FQDNEDGE: "nokia-lab.csfp.dev.software.nokia.com"
-NCM_API_URL: "https://nokia-lab.csfp.dev.software.nokia.com/ncms"
-COMPAAS_API_URL: "https://nokia-lab.csfp.dev.software.nokia.com/compaasmanager"
-
-CLUSTER: "nokia-lab"
-
-
-KUBE_DASHBOARD: True
-
+åQﬁGPì®Cã€…È'œÙz\Û<?q‹h
+eÇMä´WSXí∑”ñ·…ùÙñP·9’¿ N_⁄/¬ıƒ©@î@qßj]+œ‡sùa—◊/7÷	^±\˛ZY‘xÜÊ36“Áß2P§}¿gî¿7X€ÓX÷Ãyx6≈§°q|ÍáT)íˆ≥Ã†cØ”}ÓQ∞=¡™rO∑TlUû◊-Ë1˜Z.RÍâq¥WhOÓ∫~^ë”|Óõ|åd\ñªÅﬂı .Úx´⁄È 5Î3B(éJ4Mn®≤±"•˜˛:ês'∞Î«Aµ0ëd€wF◊D‰2ÙÏÑñˇY‰n7€èJÂ3Ú{K>ö-âˆ˝Ω{ÛóBüy ä[jGúX¡!P¿Tü~∂◊«l{N%¿O2û∞∂ñ«ãq°≠lë{ú®Ò¡xäQe
+÷`ÚV∏G∏€F};ØÔxH‰˘QkÇ¢óá≤î¨∞†W:‡A
+¥("Äâ≠·‘|lœQÉ∆‹-K«á™—¥√5íM/ªñV¥˚uâ≤qmAüD◊é*_Ï+)çÓ™íd	D∫≈‹ı–qÃ-I¡Ûªπ√q/ŸÈx“ó©∞:÷öûôY¶™\N~IóUÕ r*©∫æZe
+Ã÷ï≈tH'ãú7)@Ù‹.)Pr˛ﬂ±P±.Í>âê†1ÕI?0!$È1B»P˜scˆyÈ¿ÎpLÈŒ^∫|ÍY7≤2;|`¢a€B¡Cñï˘Ybˇà˙ª!√◊jnCb±p≤~ã*‘ÈC/"»K—ƒwáßπ˙ﬂÌ`kÁ˛ G
