@@ -1,10 +1,11 @@
+
 # File Creation Date 18-10-2022 07:29:17
 
 # This generated file is for UIV22 FP2206 release
 # Give a space after : when adding values. Example PRODUCT_NAME:abc is wrong, PRODUCT_NAME: abc is correct
 
-################  SECTION 1 - VALUES NOT DERIVED FROM BOM 
-################  SECTION 1 - FILL FOR EMPTY PARAMETERS. CAN BE REVIEWED AND CHANGED IF REQUIRED FOR FILLED VALUES. 
+################  SECTION 1 - VALUES NOT DERIVED FROM BOM
+################  SECTION 1 - FILL FOR EMPTY PARAMETERS. CAN BE REVIEWED AND CHANGED IF REQUIRED FOR FILLED VALUES.
 
 # Environment / Platform where UIV is to be installed
 # Note: Supported Values - CSFP, OCP ; DEFAULT value: CSFP.
@@ -13,22 +14,22 @@ UIV_ENV: CSFP
 PRODUCT_NAME: "Digital Operations Center"
 
 # CSFP / OCP Project where UIV is to be installed
-PROJECT: nbn-project
+PROJECT: "nbn-project"
 
 # Kubernetes namespace where UIV is to be installed
 # Note: PROJECT & NAMESPACE will be same for OCP deployments
-NAMESPACE: nbn-uiv
+NAMESPACE: "uiv-ns"
 
 # Note: DEFAULT value for CPRO_NAMESPACE in CSFP is paas.
 # Note: CHANGE CPRO_NAMESPACE for OCP deployments accordingly.
 CPRO_NAMESPACE: paas
 
-################  START OF OCP SPECIFIC PARAMS. 
+################  START OF OCP SPECIFIC PARAMS.
 # Note: CHANGE VALUES IF REQUIRED
 # OCP Lab Name.
-LAB_NAME: 
+LAB_NAME:
 # OCP Domain Name.
-DOMAIN_NAME: 
+DOMAIN_NAME:
 # Kubernetes namespace for Common Services Deployment
 # Note: DEFAULT value for COMMON_SVC_NAMESPACE in OCP is doc-common-svc
 COMMON_SVC_NAMESPACE: doc-common-svc
@@ -41,7 +42,11 @@ KEYCLOAK_MASTER_REALM_PWD: CHANGE_THIS
 # Docker registry to pull or push images.
 # In CSFP, specify the value as "HARBOR"
 # In OCP, specify docker registry path.
-DOCKER_REGISTRY: HARBOR
+DOCKER_REGISTRY: "HARBOR"
+
+HELM_REPOS:
+  - name: "s3-helm-repo"
+    url: "s3://nokia-artifacts-ap-southeast-2/charts"
 
 # Kong 5.x configuration
 # This parameter should be false if UIV is deployed on CSFP FP3. Default is true.
@@ -50,15 +55,15 @@ KONG5_ENABLED: true
 # Kong URL of the cluster
 # Set it as - https://<FQDN>/apigw (donot put / at the end)
 # In OCP, <FQDN> can be obtained from 'ckng-route' using 'oc get routes -n <common_svc_namespace>' command
-KONG_URL: https://nokia-lab.csfp.dev.software.nokia.com/apigw
+KONG_URL: https://nokia-lab2.csfp.dev.software.nokia.com/apigw
 
 # Keycloak URL of the cluster
 # Set it as - https://<FQDN>/auth (donot put / at the end)
 # In OCP, <FQDN> can be obtained from 'ckey-route' using 'oc get routes -n <common_svc_namespace>' command
-KEYCLOAK_URL: https://nokia-lab.csfp.dev.software.nokia.com/auth
+KEYCLOAK_URL: https://nokia-lab2.csfp.dev.software.nokia.com/auth
 
 # Set all UIV pods Timezone. CHANGE IF REQUIRED
-UIV_TIMEZONE: Asia/Kolkata
+UIV_TIMEZONE: Australia/Melbourne
 
 # Set to true if KEYCLOAK_REALM is to be created by UIV installation
 # When CREATE_REALM: true, realm with given name, admin user and password will be created. CHANGE VALUES IF REQUIRED
@@ -70,7 +75,7 @@ KEYCLOAK_ADMIN_USR: dWl2dXNlcjE=
 # Keycloak Admin Secret
 # Set it as - <NAMESPACE>-keycloak-config-csf-ckey-realm WHEN CREATE_REALM: true
 # Set it to REALM CREDENTIALS secret name WHEN CREATE_REALM: false
-KEYCLOAK_ADMIN_SECRET: nbn-uiv-keycloak-config-csf-ckey-realm
+KEYCLOAK_ADMIN_SECRET: uiv-ns-keycloak-config-csf-ckey-realm
 # Keycloak admin secret user key. CHANGE VALUES WHEN CREATE_REALM: false
 # NOTE: DO NOT MODIFY THIS PARAMETER WHEN CREATE_REALM: true
 KEYCLOAK_ADMIN_USR_KEY: 'user'
@@ -83,18 +88,18 @@ KEYCLOAK_ADMIN_PWD_KEY: 'password'
 DELETE_REALM: false
 
 # NEO4J PASSWORD: to be given in base64 encoded format. DEFAULT CREDENTIALS. CAN BE CHANGED IF REQUIRED
-NEO4J_PASSWORD: 
+NEO4J_PASSWORD:
 
 # CMDB/MARIADB ROOT USER PASSWORD: to be given in base64 encoded format. DEFAULT CREDENTIALS. CAN BE CHANGED IF REQUIRED
-MARIADB_PASSWORD: 
+MARIADB_PASSWORD:
 
 # MINIO USERNAME AND PASSWORD: to be given in base64 encoded format. DEFAULT CREDENTIALS. CAN BE CHANGED IF REQUIRED
-MINIO_ACCESS_KEY: 
-MINIO_SECRET_KEY: 
+MINIO_ACCESS_KEY:
+MINIO_SECRET_KEY:
 
 # IGNITE SERVER USERNAME AND PASSWORD:  to be given in base64 encoded format. DEFAULT CREDENTIALS. CAN BE CHANGED IF REQUIRED
-IGNITE_SERVER_USERNAME: 
-IGNITE_SERVER_PASSWORD: 
+IGNITE_SERVER_USERNAME:
+IGNITE_SERVER_PASSWORD:
 
 # ENABLE/DISABLE API DOCUMENTATION FOR UIV. CAN BE CHANGED IF REQUIRED. BOOLEAN VALUES true/false
 SWAGGER_ENABLED: true
@@ -139,7 +144,7 @@ RDA_AUDIT_ENABLED: true
 # Ingress certificate secret created in the CSFP environment. By default a secret with this name 'ingress-tls-certificate' is available in UIV namespace in CSFP.
 INGRESS_CERTIFICATE_NAME: ingress-tls-certificate
 
-# Keycloak Certificate file name to create below KEYCLOAK_CERTIFICATE_SECRET_NAME. 
+# Keycloak Certificate file name to create below KEYCLOAK_CERTIFICATE_SECRET_NAME.
 # By default a secret with this name 'ingress-tls-certificate' has the certificate file name as 'ca.crt' in UIV namespace in CSFP.
 KEYCLOAK_CERTIFICATE_FILE_NAME: ca.crt
 
@@ -174,10 +179,10 @@ NEO4J_DATA_DISK_STORAGE_CLASS: aws-ebs
 ###### NOTE: CAN BE CHECKED FROM CSFP GUI -> MONITORING -> STORAGE CLASSES ######
 ##### IF PARAM IS COMMENTED, USES DEFAULT STORAGE CLASS NAME. #####
 ##### IMPORTANT: STORAGE CLASS FOR BACKUP SHOULD BE OF TYPE READWRITEONCE #####
-NEO4J_BACKUP_DISK_STORAGE_CLASS: 
+NEO4J_BACKUP_DISK_STORAGE_CLASS:
 NEO4J_BACKUP_DISK_STORAGE_CLASS_TYPE: ReadWriteOnce
 ##### MARIADB BACKUP DISK PARAMETERS #####
-MARIADB_BACKUP_DISK_SIZE: 50Gi 
+MARIADB_BACKUP_DISK_SIZE: 50Gi
 MARIADB_PRESERVE_PVC: true
 
 ##### ENABLE DR POLICY (requirement of NAC team) #####
@@ -363,4 +368,3 @@ UIV_ONBOARDING_MANAGER_POD_MEMORY_SIZE_REQ: 1Gi
 UIV_ONBOARDING_MANAGER_POD_MEMORY_SIZE_LIM: 2Gi
 UIV_ONBOARDING_MANAGER_POD_HEAP_MEMORY: "-Xms820m -Xmx1434m"
 UIV_ONBOARDING_MANAGER_REPLICAS: 1
-
