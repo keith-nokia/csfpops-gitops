@@ -14,7 +14,7 @@ UIV_ENV: CSFP
 PRODUCT_NAME: "Digital Operations Center"
 
 # CSFP / OCP Project where UIV is to be installed
-PROJECT: "nbn-project"
+PROJECT: "nbnco-project"
 
 # Kubernetes namespace where UIV is to be installed
 # Note: PROJECT & NAMESPACE will be same for OCP deployments
