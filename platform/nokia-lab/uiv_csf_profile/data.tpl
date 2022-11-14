@@ -42,7 +42,8 @@ KEYCLOAK_MASTER_REALM_PWD: CHANGE_THIS
 # Docker registry to pull or push images.
 # In CSFP, specify the value as "HARBOR"
 # In OCP, specify docker registry path.
-#DOCKER_REGISTRY: "HARBOR"
+
+DOCKER_REGISTRY: "126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
 
 HELM_REPOS:
   - name: "s3-helm-repo"
