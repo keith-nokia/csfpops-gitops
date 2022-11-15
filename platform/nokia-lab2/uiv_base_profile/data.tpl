@@ -41,7 +41,8 @@ KEYCLOAK_MASTER_REALM_PWD: CHANGE_THIS
 # Docker registry to pull or push images.
 # In CSFP, specify the value as "HARBOR"
 # In OCP, specify docker registry path.
-DOCKER_REGISTRY: HARBOR
+#DOCKER_REGISTRY: HARBOR
+DOCKER_REGISTRY: "126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
 
 # Kong 5.x configuration
 # This parameter should be false if UIV is deployed on CSFP FP3. Default is true.
@@ -120,7 +121,7 @@ BACKUP_COPIES_MAX: 3
 # For eg: if the configmap naming convention is 'citmrelease-citm-ingress-tcp'
 # in CITM_RELEASE_NAME 'citmrelease-citm-ingress' needs to be provided
 # KEYCLOAK_INSTALLED_NAMESPACE should be the name of namespace where the Keycloak is installed. For eg: 'paas'
-KAFKA_EXTERNAL_ACCESS: true
+KAFKA_EXTERNAL_ACCESS: false
 CITM_RELEASE_NAME: citm-compaas
 KEYCLOAK_INSTALLED_NAMESPACE: paas
 START_PORT_RANGE_ON_EDGE_NODE: 11800
