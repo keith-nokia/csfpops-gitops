@@ -34,4 +34,5 @@ PROFILES_LIST:
  - uiv_neo4j_profile
  - uiv_onboarding_mgr_profile
  - uiv_base_profile
+ - uiv_nm_profile
  - uiv_ihub_profile
