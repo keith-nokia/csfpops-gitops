@@ -13,11 +13,11 @@ UIV_ENV: CSFP
 PRODUCT_NAME: "Digital Operations Center"
 
 # CSFP / OCP Project where UIV is to be installed
-PROJECT: nbn-project
+PROJECT: "nbnco-project"
 
 # Kubernetes namespace where UIV is to be installed
 # Note: PROJECT & NAMESPACE will be same for OCP deployments
-NAMESPACE: nbn-uiv
+NAMESPACE: "uiv-ns"
 
 # Note: DEFAULT value for CPRO_NAMESPACE in CSFP is paas.
 # Note: CHANGE CPRO_NAMESPACE for OCP deployments accordingly.
@@ -41,8 +41,12 @@ KEYCLOAK_MASTER_REALM_PWD: CHANGE_THIS
 # Docker registry to pull or push images.
 # In CSFP, specify the value as "HARBOR"
 # In OCP, specify docker registry path.
-#DOCKER_REGISTRY: HARBOR
+#DOCKER_REGISTRY: "HARBOR"
 DOCKER_REGISTRY: "126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
+
+HELM_REPOS:
+  - name: "s3-helm-repo"
+    url: "s3://nokia-artifacts-ap-southeast-2/charts"
 
 # Kong 5.x configuration
 # This parameter should be false if UIV is deployed on CSFP FP3. Default is true.
@@ -65,13 +69,13 @@ UIV_TIMEZONE: Australia/Melbourne
 # When CREATE_REALM: true, realm with given name, admin user and password will be created. CHANGE VALUES IF REQUIRED
 # When CREATE_REALM: false, name of an existing realm, realm admin username and realm admin password must be provided. CHANGE VALUES IF REQUIRED
 CREATE_REALM: true
-KEYCLOAK_REALM: ap-core
+KEYCLOAK_REALM: apcore
 # base64 encoded values to be set for keycloak admin user. CHANGE VALUES IF REQUIRED
 KEYCLOAK_ADMIN_USR: dWl2dXNlcjE=
 # Keycloak Admin Secret
 # Set it as - <NAMESPACE>-keycloak-config-csf-ckey-realm WHEN CREATE_REALM: true
 # Set it to REALM CREDENTIALS secret name WHEN CREATE_REALM: false
-KEYCLOAK_ADMIN_SECRET: nbn-uiv-keycloak-config-csf-ckey-realm
+KEYCLOAK_ADMIN_SECRET: uiv-ns-keycloak-config-csf-ckey-realm
 # Keycloak admin secret user key. CHANGE VALUES WHEN CREATE_REALM: false
 # NOTE: DO NOT MODIFY THIS PARAMETER WHEN CREATE_REALM: true
 KEYCLOAK_ADMIN_USR_KEY: 'user'
