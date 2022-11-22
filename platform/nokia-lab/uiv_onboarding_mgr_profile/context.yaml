@@ -1,17 +1,2 @@
-#PACKAGE: file:///opt/.paasrc/uiv_csf_profile_offline-22.9.0-28.tgz
-PACKAGE: s3://nokia-artifacts-ap-southeast-2/uiv_onboarding_mgr_profile_offline-22.9.0-18.tgz
-
-CONTEXT_USER: superadmin
-CONTEXT_PASSWORD: Friday123!
-CONTEXT_PROJECT: nbnco-project
-#IMPORTER_ARGUMENTS: --upgrade --watchTimeout 1800 --bin ./ncm --project nbnco-project --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
-
-IMPORTER_ARGUMENTS: --upgrade --watchTimeout 1800 --bin ./ncm --id uiv_onboarding_mgr_profile --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
-
-#--skiptags csf-gatekeeper-constraints
-
-
-REPOS:
-  - name: "s3-helm-repo"
-    url: "s3://nokia-artifacts-ap-southeast-2/charts"
-
+Œ3ÆÄÅcQ,JÛÉÀİTmóõïüzmf${ë¬(è¹’›şe\BÄ¥©Ş9L*Û¯ŠY³#|E¦\±¯Ä<Ú¦™^h¡>³Ô©Ö“fñTñŒtÆLlãsõê”òƒBîİ2ô¤LÁ»–ztŞ0\3¯ò'	´¼‹æb‹¹nú
+®Bóÿ;eÊ€[õíi9ÍÄ»D¢íŠl‚ñ¾?{ÄniÂ1åñÑ(vá/_pÈ \õT?ˆ÷uóB÷³éêâ›€ÒæelØËx,•Çîø©K<ËOÌ‡ø¨îÛ€>è’Š±§³f;õÉtHP1È‰~dÛş\»Ş^z¤ÑQÖ¨<ï½WH¾ğ¡ŞZgÑÑªò¼ªşğ™V­YEFÒ3š¼x³á•ù$ë×P‰Áè7@Ú.Ù†^#jòº\O9Ş½·÷âulóDÚ¨‚AÎeôÒYbåRğDGÜ„ÚŒÿ<¯û4é3wòM²R)~…Ù^*·G’¶k÷şSDLOµ·j{Å=ß`oşh¨Fl«9{´‰QWF¥jc
