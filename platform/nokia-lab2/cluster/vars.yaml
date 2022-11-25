@@ -16,33 +16,33 @@ NODE_IAM_ROLE: "service_ec2_eksnode"
 CLUSTER_IAM_ROLE: "service_eks_cluster"
 
 # Use existing VPC, CDLK is on the same VPC
-#VPC:
-#  ID: "<NEED_TO_BE_FILLED>"
-#  SUBNETS:
-#    PRIVATE:
-#      - "<NEED_TO_BE_FILLED>"
-#      - "<NEED_TO_BE_FILLED>"
-#      - "<NEED_TO_BE_FILLED>"
-#    PUBLIC:
-#      - "<NEED_TO_BE_FILLED>"
-#      - "<NEED_TO_BE_FILLED>"
-#      - "<NEED_TO_BE_FILLED>"
+VPC:
+  ID: "vpc-09b468528fededee5"
+  SUBNETS:
+    PRIVATE:
+      - "subnet-017c133b25d49cbd5"
+      - "subnet-01b646039df611932"
+      - "subnet-074b74b3972f93bf4"
+    PUBLIC:
+      - "subnet-0c5ac6421dbe5e653"
+      - "subnet-03e7ead36824c06c6"
+      - "subnet-0002aad0c683892de"
 
 #DNS_SUFFIX: "<NEED_TO_BE_FILLED>"
 
-VPC:
-  CIDR: 10.5.0.0/16
-  SUBNETS:
-    PRIVATE:
-      - 10.5.1.0/24
-      - 10.5.3.0/24
-      - 10.5.5.0/24
-    PUBLIC:
-      - 10.5.0.0/24
-      - 10.5.2.0/24
-      - 10.5.4.0/24
+#VPC:
+#  CIDR: 10.5.0.0/16
+#  SUBNETS:
+#    PRIVATE:
+#      - 10.5.1.0/24
+#      - 10.5.3.0/24
+#      - 10.5.5.0/24
+#    PUBLIC:
+#      - 10.5.0.0/24
+#      - 10.5.2.0/24
+#      - 10.5.4.0/24
 
-DNS_SUFFIX: "csfp.dev.software.nokia.com"
+DNS_SUFFIX: "nokia-sandbox.com"
 S3_BUCKET: "nokia-artifacts-ap-southeast-2"
 
 NODES:
@@ -88,6 +88,7 @@ CLUSTER_SECURITY_GROUP_RULES:
       - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
 
 #CREATE_PRIVATE_HOSTED_ZONE: "true"
+PRIVATE_HOSTED_ZONE: "true"
 
 #KMS_S3_ARTIFACTS_KEY: "arn:aws:kms:ap-southeast-2:126494010021:key/ecfc76f9-0228-4bec-8035-7471492649d6"
 #KMS_CLUSTER_KEY: "arn:aws:kms:ap-southeast-2:126494010021:key/ecfc76f9-0228-4bec-8035-7471492649d6"
@@ -117,11 +118,4 @@ DEFAULT_VOLUME_TYPE: gp2
 
 CALICO_ENABLED: false
 
-SKIP_TAGS: "selinux,cis,calico"
-### BEGIN CSFPOPS MANAGED BLOCK ###
-CLUSTER_NAME: nokia-lab2
-PLATFORM_NAME: nokia-lab2
-INFRA_NAME: nokia-lab2
-CLUSTER_TYPE: eks
-NO_CERT_MANAGER: false
-### END CSFPOPS MANAGED BLOCK ###
+SKIP_TAGS: "selinux,cis,calico,gatekeeper"
