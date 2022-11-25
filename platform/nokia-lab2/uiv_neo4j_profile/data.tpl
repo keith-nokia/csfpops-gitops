@@ -13,11 +13,11 @@ UIV_ENV: CSFP
 PRODUCT_NAME: "Digital Operations Center"
 
 # CSFP / OCP Project where UIV is to be installed
-PROJECT: "nbnco-project"
+PROJECT: "nbn-project"
 
 # Kubernetes namespace where UIV is to be installed
 # Note: PROJECT & NAMESPACE will be same for OCP deployments
-NAMESPACE: "uiv-ns"
+NAMESPACE: "nbn-uiv"
 
 # Note: DEFAULT value for CPRO_NAMESPACE in CSFP is paas.
 # Note: CHANGE CPRO_NAMESPACE for OCP deployments accordingly.
@@ -55,12 +55,12 @@ KONG5_ENABLED: true
 # Kong URL of the cluster
 # Set it as - https://<FQDN>/apigw (donot put / at the end)
 # In OCP, <FQDN> can be obtained from 'ckng-route' using 'oc get routes -n <common_svc_namespace>' command
-KONG_URL: https://nokia-lab2.csfp.dev.software.nokia.com/apigw
+KONG_URL: https://nokia-lab2.nokia-sandbox.com/apigw
 
 # Keycloak URL of the cluster
 # Set it as - https://<FQDN>/auth (donot put / at the end)
 # In OCP, <FQDN> can be obtained from 'ckey-route' using 'oc get routes -n <common_svc_namespace>' command
-KEYCLOAK_URL: https://nokia-lab2.csfp.dev.software.nokia.com/auth
+KEYCLOAK_URL: https://nokia-lab2.nokia-sandbox.com/auth
 
 # Set all UIV pods Timezone. CHANGE IF REQUIRED
 UIV_TIMEZONE: Australia/Melbourne
@@ -75,7 +75,7 @@ KEYCLOAK_ADMIN_USR: dWl2dXNlcjE=
 # Keycloak Admin Secret
 # Set it as - <NAMESPACE>-keycloak-config-csf-ckey-realm WHEN CREATE_REALM: true
 # Set it to REALM CREDENTIALS secret name WHEN CREATE_REALM: false
-KEYCLOAK_ADMIN_SECRET: uiv-ns-keycloak-config-csf-ckey-realm
+KEYCLOAK_ADMIN_SECRET: nbn-uiv-keycloak-config-csf-ckey-realm
 # Keycloak admin secret user key. CHANGE VALUES WHEN CREATE_REALM: false
 # NOTE: DO NOT MODIFY THIS PARAMETER WHEN CREATE_REALM: true
 KEYCLOAK_ADMIN_USR_KEY: 'user'
