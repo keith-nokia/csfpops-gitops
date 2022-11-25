@@ -7,28 +7,28 @@ localhost ansible_host=localhost ansible_connection=local ansible_user=cloud-use
 
 
 [role_all]
-nokia-lab2-worker-10.5.1.113 ansible_host=i-0e96cd58ae38098f8
-nokia-lab2-worker-10.5.1.16 ansible_host=i-0090f7ab3fbf0c0b3
-nokia-lab2-worker-10.5.3.147 ansible_host=i-0a2ded21662b62fd9
-nokia-lab2-worker-10.5.3.61 ansible_host=i-0c8ee5c715f7675af
-nokia-lab2-worker-10.5.5.22 ansible_host=i-0bb566f46920449b5
-nokia-lab2-worker-10.5.5.68 ansible_host=i-07389c0d037b02420
-nokia-lab2-edge-10.5.1.59 ansible_host=i-0e1ddacb4245aa1da
-nokia-lab2-edge-10.5.3.163 ansible_host=i-0f0b99f9c4be3e8fc
-nokia-lab2-edge-10.5.5.13 ansible_host=i-02cb941e422d4b300
+nokia-lab2-worker-10.5.1.109 ansible_host=i-0e5465d9179093aac
+nokia-lab2-worker-10.5.1.104 ansible_host=i-08249cb4e6cfaa1c6
+nokia-lab2-worker-10.5.3.142 ansible_host=i-0e451ea27608e8809
+nokia-lab2-worker-10.5.3.191 ansible_host=i-0707d367bf18d7893
+nokia-lab2-worker-10.5.5.16 ansible_host=i-0095ca0581f58320b
+nokia-lab2-worker-10.5.5.250 ansible_host=i-02813f91eb09ed91f
+nokia-lab2-edge-10.5.1.108 ansible_host=i-0fd0d147af2575254
+nokia-lab2-edge-10.5.3.149 ansible_host=i-0814a465ef9565353
+nokia-lab2-edge-10.5.5.38 ansible_host=i-00125dfa179a7204c
 
 [role_worker]
-nokia-lab2-worker-10.5.1.113 ansible_host=i-0e96cd58ae38098f8
-nokia-lab2-worker-10.5.1.16 ansible_host=i-0090f7ab3fbf0c0b3
-nokia-lab2-worker-10.5.3.147 ansible_host=i-0a2ded21662b62fd9
-nokia-lab2-worker-10.5.3.61 ansible_host=i-0c8ee5c715f7675af
-nokia-lab2-worker-10.5.5.22 ansible_host=i-0bb566f46920449b5
-nokia-lab2-worker-10.5.5.68 ansible_host=i-07389c0d037b02420
+nokia-lab2-worker-10.5.1.109 ansible_host=i-0e5465d9179093aac
+nokia-lab2-worker-10.5.1.104 ansible_host=i-08249cb4e6cfaa1c6
+nokia-lab2-worker-10.5.3.142 ansible_host=i-0e451ea27608e8809
+nokia-lab2-worker-10.5.3.191 ansible_host=i-0707d367bf18d7893
+nokia-lab2-worker-10.5.5.16 ansible_host=i-0095ca0581f58320b
+nokia-lab2-worker-10.5.5.250 ansible_host=i-02813f91eb09ed91f
 
 [role_edge]
-nokia-lab2-edge-10.5.1.59 ansible_host=i-0e1ddacb4245aa1da
-nokia-lab2-edge-10.5.3.163 ansible_host=i-0f0b99f9c4be3e8fc
-nokia-lab2-edge-10.5.5.13 ansible_host=i-02cb941e422d4b300
+nokia-lab2-edge-10.5.1.108 ansible_host=i-0fd0d147af2575254
+nokia-lab2-edge-10.5.3.149 ansible_host=i-0814a465ef9565353
+nokia-lab2-edge-10.5.5.38 ansible_host=i-00125dfa179a7204c
 
 
 [k8s:children]
