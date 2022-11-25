@@ -93,5 +93,5 @@ CUSTOM_CALM_CONFIGURATION: {{ $calm_config_file | getfile | toYaml }}
 RESOURCE_REQUEST_URL: ""
 
 PSP_ENABLED: false
-GATEKEEPER_ENABLED: true
+GATEKEEPER_ENABLED: false
 
