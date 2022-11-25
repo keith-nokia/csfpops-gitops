@@ -1,13 +1,6 @@
-PACKAGE: s3://nokia-artifacts-ap-southeast-2/uiv_csf_profile_offline-22.9.0-28.tgz
+Œ¾Â#$d'pÙÉÀÞ>W×uî³áGÇÑöLAÁ`·A{…}ýa €;Sÿ¡›ov!H•­làðÞT"RôÍS«–ˆœaÔKl#_j:¸qkÁÐ7ÝI2·‘`ÅBÔ	•º5’
++ÔF'Ì(ã*-ðA0q¤KI" «MÛyÝµJ`óßŒn5“õg4!£Ö
 
-CONTEXT_USER: "nokia-lab2-admin"
-CONTEXT_PASSWORD: "Friday123!"
-CONTEXT_PROJECT: "nbnco-project"
-#IMPORTER_ARGUMENTS: --bin ./ncm --id uiv_csf_profile --instantiate --watchTimeout 1800 --hpush --debug
-#IMPORTER_ARGUMENTS: --bin ./ncm --id uiv_csf_profile --instantiate --hpush --debug --dregistry  965352574229.dkr.ecr.us-east-1.amazonaws.com/nokia
-IMPORTER_ARGUMENTS: "--upgrade --watchTimeout 1800 --bin ./ncm --project nbnco-project --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
-#IMPORTER_ARGUMENTS: --instantiate --watchTimeout 1800 --bin ./ncm --id uiv_csf_profile --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
-
-REPOS:
-  - name: "s3-helm-repo"
-    url: "s3://nokia-artifacts-ap-southeast-2/charts"
+Ç¯,e~1Ìc3ò•ÐÕ=Ÿ3:cûžþ$´À+hèkóâ3FÃîÚ0ö¦Q;žG2GñJèÝbQß>€›>”ulóÙñþF74À¹1l°‘®*¶+*dkÒ†”¼s”ééª°ýˆ=–ã„¼q5ì¡j[WoqCÞeüQ·¯Ç(|ë±šÆ´
+wý|÷hÏ²‰ö±F^&˜5[ªÊ‹“£Ír´.%øª¢‹[:Ùô_Ï4ûè;¿¼ö±%Å¸Ô0„øáïn†kNaÿÕEúÈtu|(ûqJ÷–Žîm‡ËN8ê·47ÉßUÓOd£DNqj"~7€ ÈìÞHt½
+ï:‡ãõ¶î¨QŽ `ß–©G¾uÄìí
