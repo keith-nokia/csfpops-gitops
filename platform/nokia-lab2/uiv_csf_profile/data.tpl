@@ -56,12 +56,12 @@ KONG5_ENABLED: true
 # Kong URL of the cluster
 # Set it as - https://<FQDN>/apigw (donot put / at the end)
 # In OCP, <FQDN> can be obtained from 'ckng-route' using 'oc get routes -n <common_svc_namespace>' command
-KONG_URL:   https://nokia-lab2.nokia-sandbox.com/apigw
+KONG_URL: https://nokia-lab2.nokia-sandbox.com/apigw
 
 # Keycloak URL of the cluster
 # Set it as - https://<FQDN>/auth (donot put / at the end)
 # In OCP, <FQDN> can be obtained from 'ckey-route' using 'oc get routes -n <common_svc_namespace>' command
-KEYCLOAK_URL:  https://nokia-lab2.nokia-sandbox.com/auth
+KEYCLOAK_URL: https://nokia-lab2.nokia-sandbox.com/auth
 
 # Set all UIV pods Timezone. CHANGE IF REQUIRED
 UIV_TIMEZONE: Asia/Kolkata
