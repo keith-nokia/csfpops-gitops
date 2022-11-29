@@ -1,0 +1,117 @@
+OUTSIDE_ACCOUNT: "true"
+## AWS accound id used for deployment
+AWS_ACCOUNT_ID: "126494010021"
+AWS_REGION: "ap-southeast-2"
+
+## Create EFS File System
+EFS: "true"
+
+## Deploy cluster auto-scaler feature
+AUTOSCALING: "false"
+
+## This role must be created manually only when csfpops will be called from EC2 instance
+BASTION_IAM_ROLE: "service_ec2_bastion"
+## Roles must be created manually
+NODE_IAM_ROLE: "service_ec2_eksnode"
+CLUSTER_IAM_ROLE: "service_eks_cluster"
+
+# Use existing VPC, CDLK is on the same VPC
+#VPC:
+#  ID: "<NEED_TO_BE_FILLED>"
+#  SUBNETS:
+#    PRIVATE:
+#      - "<NEED_TO_BE_FILLED>"
+#      - "<NEED_TO_BE_FILLED>"
+#      - "<NEED_TO_BE_FILLED>"
+#    PUBLIC:
+#      - "<NEED_TO_BE_FILLED>"
+#      - "<NEED_TO_BE_FILLED>"
+#      - "<NEED_TO_BE_FILLED>"
+
+#DNS_SUFFIX: "<NEED_TO_BE_FILLED>"
+
+VPC:
+  CIDR: 10.1.0.0/16
+  SUBNETS:
+    PRIVATE:
+      - 10.1.1.0/24
+      - 10.1.3.0/24
+      - 10.1.5.0/24
+    PUBLIC:
+      - 10.1.0.0/24
+      - 10.1.2.0/24
+      - 10.1.4.0/24
+
+DNS_SUFFIX: "nbn-aws-lab.com"
+S3_BUCKET: "nokia-artifacts-ap-southeast-2"
+
+NODES:
+  WORKERS:
+    DESIRED: 6
+    MAX: 9
+    MIN: 6
+    DISK_SIZE: 100
+    INSTANCE_TYPE: "m5a.4xlarge"
+  EDGES:
+    DESIRED: 3
+#    MAX: 2
+#    MIN: 2
+    DISK_SIZE: 50
+    INSTANCE_TYPE: "m5a.2xlarge"
+  BASTION:
+    INSTANCE_TYPE: "t3a.xlarge"
+
+# EIP's will be automatically added to WAF rules
+# Need to specify it if VPN will be used to access Cluster
+WAF_RULES:
+    IPSETS:
+        - {"name": "nu-deploy-01" , "cidr": "13.237.183.33/32"}
+
+# If proxy server is ued to access AWS
+#SSH_PROXY: '87.254.212.120:8080'
+#http_proxy: "http://87.254.212.120:8080"
+
+## Custom added ##
+#SKIP_TAGS: "autoscaling,efs,cis,selinux"
+
+# Access to EKS control plane
+KUBERNETES_API_ACCESS_RULES:
+  IPSETS:
+      - {"name": "nu-deploy-01" , "cidr": "13.237.183.33/32"}
+
+# Access to ALB/EC2 nodes
+CLUSTER_SECURITY_GROUP_RULES:
+  IPSETS:
+      - {"name": "nu-deploy-01" , "cidr": "13.237.183.33/32"}
+
+#CREATE_PRIVATE_HOSTED_ZONE: "true"
+
+#KMS_S3_ARTIFACTS_KEY: "arn:aws:kms:ap-southeast-2:126494010021:key/ecfc76f9-0228-4bec-8035-7471492649d6"
+#KMS_CLUSTER_KEY: "arn:aws:kms:ap-southeast-2:126494010021:key/ecfc76f9-0228-4bec-8035-7471492649d6"
+#KMS_S3_CBUR_KEY: "arn:aws:kms:ap-southeast-2:126494010021:key/ecfc76f9-0228-4bec-8035-7471492649d6"
+
+ECR_ROOT_REPO: "nokia"
+HELM_S3_OBJECT: "charts"
+
+DEFAULT_VOLUME_TYPE: gp2
+
+#EBS_STORAGECLASS:
+#      - {name: "aws-ebs", default: true, fsType: "ext4", type: "gp2"}  # Do not change the name of this storage class
+#      - {name: "aws-gp3-ext4", fsType: "ext4", type: "gp3"}
+#      - {name: "aws-gp3-cmk", fsType: "ext4", type: "gp3", kmsKeyId: "ecfc76f9-0228-4bec-8035-7471492649d6"} # Storage class encrypted with customer provided KMS
+#      - {name: "aws-io1-ext4", fsType: "ext4", type: "io1"}
+#      - {name: "aws-io1-25-ext4", fsType: "ext4", type: "io1", iopsPerGB: "25"}
+#      - {name: "aws-io1-50-ext4", fsType: "ext4", type: "io1", iopsPerGB: "50"}
+#      - {name: "aws-gp2-xfs", fsType: "xfs", type: "gp2"}
+#      - {name: "aws-gp3-xfs", fsType: "xfs", type: "gp3"}
+#      - {name: "aws-io1-xfs", fsType: "xfs", type: "io1"}
+#      - {name: "aws-io1-25-xfs", fsType: "xfs", type: "io1", iopsPerGB: "25"}
+#      - {name: "aws-io1-50-xfs", fsType: "xfs", type: "io1", iopsPerGB: "50"}
+#      - {name: "aws-st1-xfs", fsType: "xfs", type: "st1"}
+#      - {name: "aws-sc1-xfs", fsType: "xfs", type: "sc1"}
+
+#EFS_ID: "nokia-aws-efs-id"
+
+CALICO_ENABLED: false
+
+SKIP_TAGS: "selinux,cis,calico"
