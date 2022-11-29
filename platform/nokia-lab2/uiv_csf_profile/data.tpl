@@ -1,4 +1,4 @@
-reation Date 29-11-2022 10:14:38
+#Creation Date 29-11-2022 10:14:38
 
 # This generated file is for UIV22 FP2206 release
 # Give a space after : when adding values. Example PRODUCT_NAME:abc is wrong, PRODUCT_NAME: abc is correct
