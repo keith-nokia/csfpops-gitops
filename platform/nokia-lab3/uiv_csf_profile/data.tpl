@@ -69,7 +69,7 @@ UIV_TIMEZONE: Australia/Melbourne
 # When CREATE_REALM: true, realm with given name, admin user and password will be created. CHANGE VALUES IF REQUIRED
 # When CREATE_REALM: false, name of an existing realm, realm admin username and realm admin password must be provided. CHANGE VALUES IF REQUIRED
 CREATE_REALM: true
-KEYCLOAK_REALM: apcore-new
+KEYCLOAK_REALM: ap-core
 # base64 encoded values to be set for keycloak admin user. CHANGE VALUES IF REQUIRED
 KEYCLOAK_ADMIN_USR: dWl2dXNlcjE=
 # Keycloak Admin Secret
