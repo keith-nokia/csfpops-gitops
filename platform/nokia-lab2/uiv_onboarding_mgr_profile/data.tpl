@@ -1,4 +1,4 @@
-reation Date 29-11-2022 10:14:38
+#Creation Date 29-11-2022 10:14:38
 
 # This generated file is for UIV22 FP2206 release
 # Give a space after : when adding values. Example PRODUCT_NAME:abc is wrong, PRODUCT_NAME: abc is correct
@@ -56,12 +56,12 @@ KONG5_ENABLED: true
 # Kong URL of the cluster
 # Set it as - https://<FQDN>/apigw (donot put / at the end)
 # In OCP, <FQDN> can be obtained from 'ckng-route' using 'oc get routes -n <common_svc_namespace>' command
-KONG_URL:   https://nokia-lab2.nokia-sandbox.com/apigw
+KONG_URL: https://nokia-lab2.nokia-sandbox.com/apigw
 
 # Keycloak URL of the cluster
 # Set it as - https://<FQDN>/auth (donot put / at the end)
 # In OCP, <FQDN> can be obtained from 'ckey-route' using 'oc get routes -n <common_svc_namespace>' command
-KEYCLOAK_URL:  https://nokia-lab2.nokia-sandbox.com/auth
+KEYCLOAK_URL: https://nokia-lab2.nokia-sandbox.com/auth
 
 # Set all UIV pods Timezone. CHANGE IF REQUIRED
 UIV_TIMEZONE: Asia/Kolkata
@@ -129,7 +129,7 @@ BACKUP_COPIES_MAX: 3
 KAFKA_EXTERNAL_ACCESS: true
 CITM_RELEASE_NAME: citm-compaas
 KEYCLOAK_INSTALLED_NAMESPACE: paas
-START_PORT_RANGE_ON_EDGE_NODE: 14001
+START_PORT_RANGE_ON_EDGE_NODE: 14200
 
 
 ###### KAFKA LOG RETENTION CONFIGS
@@ -172,7 +172,7 @@ NEO4J_dbms_checkpoint_iops_limit: "900"
 ###### NOTE: CAN BE CHECKED FROM CSFP GUI -> MONITORING -> STORAGE CLASSES ######
 ##### IF PARAM IS COMMENTED, USES DEFAULT STORAGE CLASS NAME. #####
 ##### IMPORTANT: STORAGE CLASS SHOULD BE OF TYPE READWRITEONCE #####
-NEO4J_DATA_DISK_STORAGE_CLASS: 
+NEO4J_DATA_DISK_STORAGE_CLASS: aws-ebs 
 
 ##### Below parameter to be filled only if backup enabled - CBUR_ENABLED: true #####
 ##### NEO4J BACKUP DISK PARAMETERS #####
@@ -180,7 +180,7 @@ NEO4J_DATA_DISK_STORAGE_CLASS:
 ###### NOTE: CAN BE CHECKED FROM CSFP GUI -> MONITORING -> STORAGE CLASSES ######
 ##### IF PARAM IS COMMENTED, USES DEFAULT STORAGE CLASS NAME. #####
 ##### IMPORTANT: STORAGE CLASS FOR BACKUP SHOULD BE OF TYPE READWRITEONCE #####
-NEO4J_BACKUP_DISK_STORAGE_CLASS: 
+NEO4J_BACKUP_DISK_STORAGE_CLASS: aws-ebs
 NEO4J_BACKUP_DISK_STORAGE_CLASS_TYPE: ReadWriteOnce
 ##### MARIADB BACKUP DISK PARAMETERS #####
 MARIADB_BACKUP_DISK_SIZE: 50Gi 
