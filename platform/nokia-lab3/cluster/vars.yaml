@@ -53,7 +53,7 @@ NODES:
     DISK_SIZE: 100
     INSTANCE_TYPE: "m5a.4xlarge"
   EDGES:
-    DESIRED: 2
+    DESIRED: 3
 #    MAX: 2
 #    MIN: 2
     DISK_SIZE: 50
