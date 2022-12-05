@@ -1,0 +1,52 @@
+
+[bastion]
+localhost ansible_host=localhost ansible_connection=local ansible_user=cloud-user
+
+[deployer]
+localhost ansible_host=localhost ansible_connection=local ansible_user=cloud-user
+
+
+[role_all]
+nokia-lab3-worker-10.10.1.128 ansible_host=i-00046ec3266487d66
+nokia-lab3-worker-10.10.3.114 ansible_host=i-0fe9be1de586eb874
+nokia-lab3-worker-10.10.5.152 ansible_host=i-094978ba277623aa5
+nokia-lab3-edge-10.10.1.199 ansible_host=i-0defb9955383523df
+nokia-lab3-edge-10.10.3.203 ansible_host=i-014f3b6ab82452d8c
+nokia-lab3-edge-10.10.5.85 ansible_host=i-0f757e2c66e358054
+
+[role_worker]
+nokia-lab3-worker-10.10.1.128 ansible_host=i-00046ec3266487d66
+nokia-lab3-worker-10.10.3.114 ansible_host=i-0fe9be1de586eb874
+nokia-lab3-worker-10.10.5.152 ansible_host=i-094978ba277623aa5
+
+[role_edge]
+nokia-lab3-edge-10.10.1.199 ansible_host=i-0defb9955383523df
+nokia-lab3-edge-10.10.3.203 ansible_host=i-014f3b6ab82452d8c
+nokia-lab3-edge-10.10.5.85 ansible_host=i-0f757e2c66e358054
+
+
+[k8s:children]
+role_all
+role_worker
+role_edge
+
+[k8s:vars]
+[platform:children]
+k8s
+bastion
+deployer
+
+[platform:vars]
+ansible_connection=community.aws.aws_ssm
+ansible_aws_ssm_region=ap-southeast-2
+ansible_aws_ssm_bucket_name=nokia-artifacts-ap-southeast-2
+ansible_aws_ssm_retries=20
+ansible_user="ssm-user"
+
+ENABLE_KEEPALIVED=false
+ENABLE_EGRESS=false
+ENABLE_EGRESS_LB=false
+INGRESS_SPLIT_ENABLED=false
+
+ALLOWED_CIDRS=192.168.0.0/16
+NETWORK_POLICIES_CIDR=192.168.0.0/16
