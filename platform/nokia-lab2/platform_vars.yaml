@@ -27,6 +27,8 @@ CREATE_WILDCARD_CNAME: false
 CAAS_PSP_ENABLED: false
 ADMINACCOUNT: nokia-lab2-admin
 LOCAL_INSTALLER_PASSWORD: Friday123!
+PLATFORM_FQDN: nokia-lab2.nokia-sandbox.com
+INGRESS_FOR_OAM_SERVICES: nokia-lab2.nokia-sandbox.com
 PROFILES_LIST:
  - uiv_csf_profile
  - uiv_neo4j_profile
