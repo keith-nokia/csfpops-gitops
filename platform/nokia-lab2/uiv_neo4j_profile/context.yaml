@@ -1,14 +1,3 @@
-PACKAGE: s3://nokia-artifacts-ap-southeast-2/uiv_neo4j_profile_offline-22.11.0-38.tgz
-
-CONTEXT_USER: "uiv-admin"
-CONTEXT_PASSWORD: "Friday123!"
-CONTEXT_PROJECT: "nbnco-project"
-
-
-REPOS:
-  - name: "s3-helm-repo"
-    url: "s3://nokia-artifacts-ap-southeast-2/charts"
-
-IMPORTER_ARGUMENTS: "--instantiate --watchTimeout 1800 --bin ./ncm --project nbnco-project --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
-
-
+ŒAfÙÔı‰ÚÛÉÀŒua{11ŞÀùûí(«íNĞ2±üà/ïhP\•
+üŠG½S÷NiÁä¿FCÜ#TUU}¥tÎJ½õ@÷ä‡=K'İÓ^4~
+ã·xÓ„+Ïrbn…–¹±Ğ}ëF°ÅM¤½O(Ùšá?;Ï­HFeË	¡€òW	G‡n¥]ÿoJ¥›Üwt@Â¾åÅ1óP(­1*‡ı^ğA»Ãjù¥¨{7*,eyúWDC*ø–ÛğôIûo…ºÑ%ãÈz'"Û½Í&ãœµÍy 	_c!V¸'©+mABpå&¨@5ü¢œÀj¬Š˜ıÒr-u÷›R°0.¬éÊ$àÜŠÏè7ÅŞ/‹Ì€6W‰à¤U™ì-ş©3G()Gİ"ÀŠK)AÑr«—‹‡s"›gæ8í­Aóó~ó-râ½À±zkğ|ec$O¯âÛÎiDşü

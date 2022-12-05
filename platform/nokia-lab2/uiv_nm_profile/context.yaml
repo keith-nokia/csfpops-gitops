@@ -1,8 +1,3 @@
-#PACKAGE: file:///opt/.paasrc/uiv_csf_profile_offline-22.9.0-28.tgz
-PACKAGE: s3://nokia-artifacts-ap-southeast-2/uiv_nm_profile_offline-22.9.1-51.tgz
-
-REPOS:
-  - name: "s3-helm-repo"
-    url: "s3://nokia-artifacts-ap-southeast-2/charts"
-
-IMPORTER_ARGUMENTS: "--instantiate --watchTimeout 1800 --bin ./ncm --project nbnco-project --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
+ŒeªùØöàÛÉÀy'ÌÓp¼Õƒ×[T;4ÇIçãßJ3Ž#ˆ§ê†)(X>=Ìö‡&ãâ:©Ž™PÐy¶"õ€Ç7ø}Òµ^.`yP+“ÁÄ%ÊD½ízF8çºÊ°RmÐôï
+†´Ì»”½'/‡8«eµtX¸Í™	5Ä\,×ÀT‚P™8ÓHdQKÞÜÚH§#ú²L)áx]±òÅ×Ü‘	sÈ">ÓÂuûgêš*AïE)§dji0©àRoÎœ‘àx]ùŠpcÀ£{Ó"qÒ‹è˜Š¢ 8Ç’oôO3‡½J¢A ¸ÚÏ–«öÖl¨î¤Æl¸Yúœ;
+¿ƒä¡v­y0yßb§Eä+òýfÎ2„²ÕPÑãî'ë*(Í™¾t£Õ\\ë d2
