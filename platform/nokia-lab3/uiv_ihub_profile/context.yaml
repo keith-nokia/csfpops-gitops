@@ -1,1 +1,12 @@
-Œ8<#ÌÜÖÈÛÉÀ æİ~s„µvpuø˜CË´ˆ¹T¸jÎşÏŸ©Zôf7K¦“6‹Á)ü¦f¿QáQœir®ÕRø´xq“š·áˆÈTì«NCM0¸vLVÍ=YÇUK’ˆÀ5}áè"©[¢…tÈ±Ğ-&âóÙëËÓ—h-0¨r»ÍêopúT»o£cÚ9.-Çß¥ŒÂ¶npÙJu~Ê¢5¨­uÅt#xãæ”×E"šìâ1=öºEØP5æäæ~{¨w÷ª&bƒø¾óÔq°îp,ÿ>±ÜmL^“íæµVŞ3Æ¢„õ~xôÓ5_à.ˆ7ÀÔ~ÿÓ:CªY™œ¼WOuSÏ6FjW[#”0Ï±ø«²ø×mP[œµUäğZÅµõr*æb³Íü`’£œx";Úp¡V3¾Åa©àíšŠ7ìS;hÉGÙ‡ÒÂ€
+PACKAGE: s3://nokia-artifacts-ap-southeast-2/uiv_onboarding_mgr_profile_offline-22.9.1-56.tgz
+
+CONTEXT_USER: "uivuser"
+CONTEXT_PASSWORD: "Friday123!"
+CONTEXT_PROJECT: "nbn-project"
+
+REPOS:
+  - name: "s3-helm-repo"
+    url: "s3://nokia-artifacts-ap-southeast-2/charts"
+
+#IMPORTER_ARGUMENTS: "--upgrade --watchTimeout 1800 --bin ./ncm --project nbn-project --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
+IMPORTER_ARGUMENTS: "--instantiate --watchTimeout 1800 --bin ./ncm --project nbn-project --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
