@@ -1,3 +1,7 @@
-Œşš„Œ"QSÛÉÀdÇÈ»Ö.Ã{¢Õy•\ÖG•oPªğımÒÁ1¾ş0Á–11õlï{Œí7Å pf$p½³À|l;DÉñØ¬ÿ!8ñ¼¾!‰)]É ›²nÕœ5<[D¤iSÔÎïÀKuøI,,Ükâ°Ò‚¢$¨‚ Ìh)r˜#–"	æ²UE•7j
-Õ ±µÚ­‰æëAa‰‰î8ùÇ÷Í”$àÂ_dİ¡8»ş:!g•¨[^‹>¹‰—	çâq­ƒZ“Œt~áBj&vjÌ[ô›Ù®ğœ¿5- Íf6İáÚÂ¶È;DjÜ%ZQ/) ëòMY¢s–]š
-¯d">KÔNài£7aÆMkûëãiÂbóÑ¡êrºGuVGZLádå½
+PACKAGE: s3://nokia-artifacts-ap-southeast-2/uiv_ihub_profile_offline-22.9.1-55.tgz
+
+REPOS:
+  - name: "s3-helm-repo"
+    url: "s3://nokia-artifacts-ap-southeast-2/charts"
+
+IMPORTER_ARGUMENTS: "--instantiate --watchTimeout 1800 --bin ./ncm --project nbnco-project --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
