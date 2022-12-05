@@ -38,6 +38,8 @@ CAAS_PSP_ENABLED: False
 
 ADMINACCOUNT: nokia-lab3-admin
 LOCAL_INSTALLER_PASSWORD: Friday123!
+PLATFORM_FQDN: nokia-lab3.nokia-sandbox.com
+INGRESS_FOR_OAM_SERVICES: nokia-lab3.nokia-sandbox.com
 PROFILES_LIST:
  - uiv_csf_profile
  - uiv_neo4j_profile
