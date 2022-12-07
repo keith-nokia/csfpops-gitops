@@ -1,7 +1,45 @@
-åRÉo?ì*¸€…Èpâr!é«Â¢$ê…Ä‰ß
-KÇxƒ√MW9˜Hñ4`çX°5∫S
-ÊÀOg™‘À÷XY9∑
-!•˙÷–à‘Ô
-Ô*SÿvL%[JÉ`R∑òA! yô2—lx:‘n∞ı3ÈAÉ.„πÈb√‹[YqqÛÿ=ô™’bÑLÃÛ5Ë”/≤LBà<Ò/—ë»¢“≈h%"4jﬂhm  ﬂiO›^˝Ì˛@¿õîGHühπ¯u¢R≤<ì„∑⁄ÅuW∑Œˆ,ˆ…æD¸	ƒU^sC˛
-üŒÓONE—ûãü K»b ìBT¯•ÒH‹◊lîtïÍ)ë◊≈m&û~Éöª©ibnÙΩ6≈bimºÔvÛ˙÷¸∫„Ã±›E¨–èöH»ù¯ä’TV∂Â—¬ñP+pfw¬íÂN°ß∆ó∑ü√˚;—„^ 8¡À(Æ—®ï1˚\º¯õ≠ ´Å_Í|∫nÈâdI	Ûéå«fcjÏﬁ(`S@§Åy>›¨3‘·˝#	tIÎa‘6w¯ZÖÖC&=ﬂ∑à¶`€S)J∏Ù=$Ë◊FÔÁ—‡
-ê#fòÎsî≈QE’q≤◊Ô≈ˆq_ìvÓ∆ñôD∆)*ºXiYâº>∞òÂ…eÎÑ›Ê0W‹d"˛VX`“!ˆùNGKQ_0giéOa¢ó¬Ò‰ù«˚Ã L¯>i∫◊\ 8Ñ∞+ÓÕ£}nÆÿ7÷^ES}ßy]ZWXö√}•œ@bñ¸Úd…–îH+
+---
+DOMAIN_NAME: "nokia-lab3.nokia-sandbox.com"
+DOMAIN_NAME_OAM: "nokia-lab3.nokia-sandbox.com"
+
+CORE_SERVICES_SUBDOMAINS: False
+CORE_SERVICES_SUBDOMAINS_BACK_COMP_ENABLED: True
+
+NETWORK_STACK: ipv4_only
+
+
+
+K8S_API_SERVER_ENDPOINT: "https://34845846C6871C064AD595683E84F01C.gr7.ap-southeast-2.eks.amazonaws.com"
+LCM_HELM: 3
+HELM_VERSION: 3
+RWX_STORAGE_CLASS: aws-efs
+RWO_STORAGE_CLASS: aws-ebs
+CBUR_STORAGECLASS: aws-ebs
+DEFAULT_SC_RWX: aws-efs
+DEFAULT_SC_RWX_BACKUP: aws-efs
+DEFAULT_SC_RWO: aws-ebs
+CA_ISSUER_NAME: ca-issuer
+IMAGE_REGISTRY: 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
+DOCKER_REGISTRY: 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
+
+LOCAL_INSTALLER_PASSWORD: "Friday123!"
+
+ADMINACCOUNT: "nokia-lab3-admin"
+
+CSFP_PLAYBOOK_IMAGE_REGISTRY: "126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
+CSFP_ADDONS_IMAGE_REGISTRY: "126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
+
+## DATA INJECTED FOR AF
+CLUSTER_ENDPOINT: "nokia-lab3.nokia-sandbox.com"
+COMPAAS_FQDN: "nokia-lab3.nokia-sandbox.com"
+CSFP_FQDN: "nokia-lab3.nokia-sandbox.com"
+COMPAAS_INGRESS_FQDN: "nokia-lab3.nokia-sandbox.com"
+FQDNEDGE: "nokia-lab3.nokia-sandbox.com"
+NCM_API_URL: "https://nokia-lab3.nokia-sandbox.com/ncms"
+COMPAAS_API_URL: "https://nokia-lab3.nokia-sandbox.com/compaasmanager"
+
+CLUSTER: "nokia-lab3"
+
+
+KUBE_DASHBOARD: True
+
