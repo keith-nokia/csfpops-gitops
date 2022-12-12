@@ -1,3 +1,17 @@
-ŒÉÁ”¬&vxÚÛÉÀÞ³uI™?–70Ý,º_~~_Ý¼;ô…ìxYåú…9zÀq`^UUþë¾X;ž†G8ð48¶Óéå(ñ¸EYŒ+·T¯
-UÌçêiÄÕ­; íxÚœ´ò÷<p|ž_±	»˜žJzF
-]cÖ}ž«ÑJ2zh<7Ô;_7æ»gÊ¢½ÒlÝ;‡úF•Øæk,—ˆ"S²Z!ÃÕ¡b‘¿¥—¥ªÏ€ÔÓ§gOSs]mÁÐD¿ÀJ˜NLP˜‹@=!s‰ïÍx­¦(%6Àé/¾œâªãS‡®1@c§5œž’¿>L™†JlŠænõ’ÂÈäãKJby8«á±ô‹O#Eîùø(26°» ‚—Go·vyE°þ`·ed7oLÐhºˆÄÝ+¾4äudÊ‘2-®-`á\z““— å†c×6[ÛËUïœüº¬SÆŽßM9*úBSpÊ“<`k„vqq|ÁrüÉƒ°}ì¢@§ŸØåØœ©„…Ãð‡ÍëâÄG÷¶8¿j›eãñ"7õ²`Œo(‹¨ƒ­æ¬	*
+#PACKAGE: file:///opt/.paasrc/uiv_csf_profile_offline-22.9.0-28.tgz
+PACKAGE: s3://nokia-artifacts-ap-southeast-2/uiv_onboarding_mgr_profile_offline-22.9.0-18.tgz
+
+CONTEXT_USER: superadmin
+CONTEXT_PASSWORD: Friday123!
+CONTEXT_PROJECT: nbnco-project
+#IMPORTER_ARGUMENTS: --upgrade --watchTimeout 1800 --bin ./ncm --project nbnco-project --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
+
+IMPORTER_ARGUMENTS: --upgrade --watchTimeout 1800 --bin ./ncm --id uiv_onboarding_mgr_profile --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
+
+#--skiptags csf-gatekeeper-constraints
+
+
+REPOS:
+  - name: "s3-helm-repo"
+    url: "s3://nokia-artifacts-ap-southeast-2/charts"
+
