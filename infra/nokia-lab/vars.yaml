@@ -42,7 +42,8 @@ VPC:
       - 10.1.2.0/24
       - 10.1.4.0/24
 
-DNS_SUFFIX: "nbn-aws-lab.com"
+DNS_SUFFIX: "nokia-sandbox.com"
+#nbn-aws-lab.com"
 S3_BUCKET: "nokia-artifacts-ap-southeast-2"
 
 NODES:
