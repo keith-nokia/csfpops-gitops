@@ -86,7 +86,7 @@ CLUSTER_SECURITY_GROUP_RULES:
       - {"name": "nu-deploy-01" , "cidr": "13.237.183.33/32"}
 
 #CREATE_PRIVATE_HOSTED_ZONE: "true"
-
+PRIVATE_HOSTED_ZONE: "true"
 #KMS_S3_ARTIFACTS_KEY: "arn:aws:kms:ap-southeast-2:126494010021:key/ecfc76f9-0228-4bec-8035-7471492649d6"
 #KMS_CLUSTER_KEY: "arn:aws:kms:ap-southeast-2:126494010021:key/ecfc76f9-0228-4bec-8035-7471492649d6"
 #KMS_S3_CBUR_KEY: "arn:aws:kms:ap-southeast-2:126494010021:key/ecfc76f9-0228-4bec-8035-7471492649d6"
