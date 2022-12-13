@@ -23,6 +23,7 @@ CLUSTER_IAM_ROLE: "service_eks_cluster"
 #      - "subnet-017c133b25d49cbd5"
 #      - "subnet-01b646039df611932"
 #      - "subnet-074b74b3972f93bf4"
+#      - "subnet-02d9af1e5ce64c5d7"
 #    PUBLIC:
 #      - "subnet-0c5ac6421dbe5e653"
 #      - "subnet-03e7ead36824c06c6"
@@ -37,6 +38,7 @@ VPC:
       - 10.5.1.0/24
       - 10.5.3.0/24
       - 10.5.5.0/24
+      - 10.5.7.0/24
     PUBLIC:
       - 10.5.0.0/24
       - 10.5.2.0/24
