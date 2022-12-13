@@ -36,3 +36,4 @@ PROFILES_LIST:
  - uiv_base_profile
  - uiv_nm_profile
  - uiv_ihub_profile
+ - uiv_crpt_profile
