@@ -117,3 +117,5 @@ CALICO_ENABLED: false
 SKIP_TAGS: "selinux,cis,calico,gatekeeper"
 ####### BLOCK ADDED BY CSFPOPS #######
 ############ END OF BLOCK ############
+####### BLOCK ADDED BY CSFPOPS #######
+############ END OF BLOCK ############
