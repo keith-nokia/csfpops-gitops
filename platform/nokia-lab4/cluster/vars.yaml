@@ -115,3 +115,10 @@ DEFAULT_VOLUME_TYPE: gp2
 CALICO_ENABLED: false
 
 SKIP_TAGS: "selinux,cis,calico,gatekeeper"
+### BEGIN CSFPOPS MANAGED BLOCK ###
+CLUSTER_NAME: nokia-lab4
+PLATFORM_NAME: nokia-lab4
+INFRA_NAME: nokia-lab4
+CLUSTER_TYPE: eks
+NO_CERT_MANAGER: false
+### END CSFPOPS MANAGED BLOCK ###
