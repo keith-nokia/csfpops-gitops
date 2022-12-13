@@ -48,9 +48,9 @@ S3_BUCKET: "nokia-artifacts-ap-southeast-2"
 
 NODES:
   WORKERS:
-    DESIRED: 7
+    DESIRED: 6
     MAX: 9
-    MIN: 7
+    MIN: 6
     DISK_SIZE: 100
     INSTANCE_TYPE: "m5a.4xlarge"
   EDGES:
