@@ -61,7 +61,7 @@ NODES:
 # Need to specify it if VPN will be used to access Cluster
 WAF_RULES:
     IPSETS:
-        - {"name": "nu-deploy-04" , "cidr": "3.24.165.59/32"}
+        - {"name": "nu-deploy-04" , "cidr": "52.62.76.122/32"}
         - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
 
 # If proxy server is ued to access AWS
@@ -74,13 +74,13 @@ WAF_RULES:
 # Access to EKS control plane
 KUBERNETES_API_ACCESS_RULES:
   IPSETS:
-      - {"name": "nu-deploy-04" , "cidr": "3.24.165.59/32"}
+      - {"name": "nu-deploy-04" , "cidr": "52.62.76.122/32"}
       - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
 
 # Access to ALB/EC2 nodes
 CLUSTER_SECURITY_GROUP_RULES:
   IPSETS:
-      - {"name": "nu-deploy-04" , "cidr": "3.24.165.59/32"}
+      - {"name": "nu-deploy-04" , "cidr": "52.62.76.122/32"}
       - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
 
 #CREATE_PRIVATE_HOSTED_ZONE: "true"
@@ -115,5 +115,3 @@ DEFAULT_VOLUME_TYPE: gp2
 CALICO_ENABLED: false
 
 SKIP_TAGS: "selinux,cis,calico,gatekeeper"
-####### BLOCK ADDED BY CSFPOPS #######
-############ END OF BLOCK ############
