@@ -38,6 +38,7 @@ VPC:
       - 10.5.1.0/24
       - 10.5.3.0/24
       - 10.5.5.0/24
+      - 10.5.7.0/24
     PUBLIC:
       - 10.5.0.0/24
       - 10.5.2.0/24
@@ -61,6 +62,26 @@ NODES:
     INSTANCE_TYPE: "m5a.2xlarge"
   BASTION:
     INSTANCE_TYPE: "t3a.xlarge"
+  ADDITIONAL_NODE_GROUPS:
+      - NAME: test                        # Required
+        DESIRED: 2                        # Required
+        MAX: 2
+        MIN: 2
+        INSTANCE_TYPE: "m5a.4xlarge"      # Required
+        ROOT_DISK_SIZE: 50
+        ROOT_VOLUME_TYPE: gp2
+        DISK_SIZE: 100                    # Required
+        VOLUME_TYPE: gp2
+        AUTOSCALLING: false
+        LABELS:
+          - key: is_worker
+            value: yes
+          - key: is_control
+            value: yes
+        #TAINTS: "is_important=true:NoExecute,is_test=true:NoExecute"
+        USER_DATA: "additionnal_test_user_data.sh"
+
+
 
 # EIP's will be automatically added to WAF rules
 # Need to specify it if VPN will be used to access Cluster
