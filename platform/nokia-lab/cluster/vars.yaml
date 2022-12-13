@@ -128,3 +128,5 @@ DEFAULT_VOLUME_TYPE: gp2
 CALICO_ENABLED: false
 
 SKIP_TAGS: "selinux,cis,calico"
+####### BLOCK ADDED BY CSFPOPS #######
+############ END OF BLOCK ############
