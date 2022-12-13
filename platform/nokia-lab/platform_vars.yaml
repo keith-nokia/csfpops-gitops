@@ -34,5 +34,5 @@ PROFILES_LIST:
   - uiv_base_profile
   - uiv_nm_profile
   - uiv_ihub_profile
-PLATFORM_FQDN: nokia-lab.nokia-sandbox.com
-INGRESS_FOR_OAM_SERVICES: nokia-lab.nokia-sandbox.com
+PLATFORM_FQDN: nokia-lab.nbn-aws-lab.com
+INGRESS_FOR_OAM_SERVICES: nokia-lab.nbn-aws-lab.com
