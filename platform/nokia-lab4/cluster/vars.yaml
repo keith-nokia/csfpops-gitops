@@ -20,13 +20,13 @@ VPC:
   ID: "vpc-080d2ca190997054f"
   SUBNETS:
     PRIVATE:
-      - "subnet-005211fe1ce6aff4b"
-      - "subnet-0de282f0ed7803614"
-      - "subnet-0876cd38120a225f1"
+      - "subnet-078b250169eea1a58"
+      - "subnet-04fc9cee79a84e2c5"
+      - "subnet-01ffc39e2548363ca"
     PUBLIC:
-      - "subnet-014ec497bdd0eab8a"
-      - "subnet-06d39eca3e929362b"
-      - "subnet-06d66d29ef3f7899a"
+      - "subnet-00bda2635fdbe1f5c"
+      - "subnet-072500b52b10e5d32"
+      - "subnet-059e4a2367227a25f"
 
 #DNS_SUFFIX: "<NEED_TO_BE_FILLED>"
 
@@ -115,7 +115,3 @@ DEFAULT_VOLUME_TYPE: gp2
 CALICO_ENABLED: false
 
 SKIP_TAGS: "selinux,cis,calico,gatekeeper"
-####### BLOCK ADDED BY CSFPOPS #######
-############ END OF BLOCK ############
-####### BLOCK ADDED BY CSFPOPS #######
-############ END OF BLOCK ############
