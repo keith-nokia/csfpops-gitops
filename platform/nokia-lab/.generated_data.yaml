@@ -1,45 +1,3 @@
----
-DOMAIN_NAME: "nokia-lab.csfp.dev.software.nokia.com"
-DOMAIN_NAME_OAM: "nokia-lab.csfp.dev.software.nokia.com"
-
-CORE_SERVICES_SUBDOMAINS: False
-CORE_SERVICES_SUBDOMAINS_BACK_COMP_ENABLED: True
-
-NETWORK_STACK: ipv4_only
-
-
-
-K8S_API_SERVER_ENDPOINT: "https://0B1F4F7FDAC81CD4FE746811F97C0228.gr7.ap-southeast-2.eks.amazonaws.com"
-LCM_HELM: 3
-HELM_VERSION: 3
-RWX_STORAGE_CLASS: aws-efs
-RWO_STORAGE_CLASS: aws-ebs
-CBUR_STORAGECLASS: aws-ebs
-DEFAULT_SC_RWX: aws-efs
-DEFAULT_SC_RWX_BACKUP: aws-efs
-DEFAULT_SC_RWO: aws-ebs
-CA_ISSUER_NAME: ca-issuer
-IMAGE_REGISTRY: 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
-DOCKER_REGISTRY: 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
-
-LOCAL_INSTALLER_PASSWORD: "Friday123!"
-
-ADMINACCOUNT: "superadmin"
-
-CSFP_PLAYBOOK_IMAGE_REGISTRY: "126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
-CSFP_ADDONS_IMAGE_REGISTRY: "126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
-
-## DATA INJECTED FOR AF
-CLUSTER_ENDPOINT: "nokia-lab.csfp.dev.software.nokia.com"
-COMPAAS_FQDN: "nokia-lab.csfp.dev.software.nokia.com"
-CSFP_FQDN: "nokia-lab.csfp.dev.software.nokia.com"
-COMPAAS_INGRESS_FQDN: "nokia-lab.csfp.dev.software.nokia.com"
-FQDNEDGE: "nokia-lab.csfp.dev.software.nokia.com"
-NCM_API_URL: "https://nokia-lab.csfp.dev.software.nokia.com/ncms"
-COMPAAS_API_URL: "https://nokia-lab.csfp.dev.software.nokia.com/compaasmanager"
-
-CLUSTER: "nokia-lab"
-
-
-KUBE_DASHBOARD: True
-
+ŒRtCÁÛÉéå¤có4&Ÿ­Ú$IiÝËA‚1~àír@!t×«ëC³yžKŠ|šŠß"dÿàÙæ×?ºa®˜·Þ^ÂÄ˜0d×G>»w8p!P«°JÜ»Q –[ùâ6H<çV°R «V«€·@
+Ö	½-c­4Ë‹@`Ü…¯&FÕI+å¤†lîïY¬ŸÍïþ¤€»Ô›{™>¨Q
+›(–HŸygšo*Ü¿‹ô&éö;DšßâbÎ32µ©T©¹jÎtÜ&Ñ3Ð‰Gª€Ø:’BdLRwžVŸÁ—]¾ÐFÝr›à^n×€lžåyKôgÅþôŽ¨ºê36{W(3wÉ-Ûr‡Ñt«,¢Yõ£ß}|oáÇ’_O©uP´rÏ¡mP½Ÿ¯R¥Hàî„-« Šy±FéVO2î0Y¹¯V¦âžõÞÿßZ#èÿÚéîbI+šg†Z›'OÐì?˜•ãcï€e÷tÿ[ÇGN ­ZÝ6ÚV~4]èÇP6fGvÆ57K{j¸qÁ‰ÿÀ^É´‹åÇ±|¸"=!ØîBõâ®R€}[Áæ4LŒú\Vå5—/«Èòô)»Õ÷ ´¡ž™N±5}CËàô-2üÆnŠ_p¢';E¶.y²	ûì ¿»¸ãVÀÙØgéŽùÞz,†¯©O¢e°%¬½'²v&lJcHhaqaÅ¼$ÖøÂ@l†Œ‰@hÇ`ç¸)¢~+šéWêŸ7Ž±7ÕFª¿”¶{qßTæÀßwj
