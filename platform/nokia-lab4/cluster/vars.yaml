@@ -16,31 +16,31 @@ NODE_IAM_ROLE: "service_ec2_eksnode"
 CLUSTER_IAM_ROLE: "service_eks_cluster"
 
 # Use existing VPC, CDLK is on the same VPC
-VPC:
-  ID: "vpc-080d2ca190997054f"
-  SUBNETS:
-    PRIVATE:
-      - "subnet-078b250169eea1a58"
-      - "subnet-04fc9cee79a84e2c5"
-      - "subnet-01ffc39e2548363ca"
-    PUBLIC:
-      - "subnet-00bda2635fdbe1f5c"
-      - "subnet-072500b52b10e5d32"
-      - "subnet-059e4a2367227a25f"
+#VPC:
+#  ID: "vpc-080d2ca190997054f"
+#  SUBNETS:
+#    PRIVATE:
+#      - "subnet-078b250169eea1a58"
+#      - "subnet-04fc9cee79a84e2c5"
+#      - "subnet-01ffc39e2548363ca"
+#    PUBLIC:
+#      - "subnet-00bda2635fdbe1f5c"
+#      - "subnet-072500b52b10e5d32"
+#      - "subnet-059e4a2367227a25f"
 
 #DNS_SUFFIX: "<NEED_TO_BE_FILLED>"
 
-#VPC:
-#  CIDR: 10.15.0.0/16
-#  SUBNETS:
-#    PRIVATE:
-#      - 10.15.1.0/24
-#      - 10.15.3.0/24
-#      - 10.15.5.0/24
-#    PUBLIC:
-#      - 10.15.0.0/24
-#      - 10.15.2.0/24
-#      - 10.15.4.0/24
+VPC:
+  CIDR: 10.15.0.0/16
+  SUBNETS:
+    PRIVATE:
+      - 10.15.1.0/24
+      - 10.15.3.0/24
+      - 10.15.5.0/24
+    PUBLIC:
+      - 10.15.0.0/24
+      - 10.15.2.0/24
+      - 10.15.4.0/24
 
 DNS_SUFFIX: "nokia-sandbox.com"
 S3_BUCKET: "nokia-artifacts-ap-southeast-2"
