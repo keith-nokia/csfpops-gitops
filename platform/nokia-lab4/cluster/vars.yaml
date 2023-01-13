@@ -35,11 +35,11 @@ VPC:
   SUBNETS:
     PRIVATE:
       - 10.15.1.0/24
-#      - 10.15.3.0/24
+      - 10.15.3.0/24
 #      - 10.15.5.0/24
     PUBLIC:
       - 10.15.0.0/24
-#      - 10.15.2.0/24
+      - 10.15.2.0/24
 #      - 10.15.4.0/24
 
 DNS_SUFFIX: "nokia-sandbox.com"
@@ -121,10 +121,3 @@ DEFAULT_VOLUME_TYPE: gp2
 CALICO_ENABLED: false
 
 SKIP_TAGS: "selinux,cis,calico,gatekeeper"
-### BEGIN CSFPOPS MANAGED BLOCK ###
-CLUSTER_NAME: nokia-lab4
-PLATFORM_NAME: nokia-lab4
-INFRA_NAME: nokia-lab4
-CLUSTER_TYPE: eks
-NO_CERT_MANAGER: false
-### END CSFPOPS MANAGED BLOCK ###
