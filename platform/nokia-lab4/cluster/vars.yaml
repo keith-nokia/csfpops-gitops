@@ -16,29 +16,29 @@ NODE_IAM_ROLE: "service_ec2_eksnode"
 CLUSTER_IAM_ROLE: "service_eks_cluster"
 
 # Use existing VPC, CDLK is on the same VPC
-VPC:
-  ID: "vpc-0e4d978a713c65ed1"
-  SUBNETS:
-    PRIVATE:
-      - "subnet-00ebe1c97c2e536a8"
-      - "subnet-0d8931c820002fa1e"
-      - "subnet-0b8cd1b406b420b4f"
-    PUBLIC:
-      - "subnet-07d3b9c971047a3a4"
-      - "subnet-01ce7a58a315621f4"
-      - "subnet-065f25112df5b4f91"
+#VPC:
+#  ID: "vpc-0e4d978a713c65ed1"
+#  SUBNETS:
+#    PRIVATE:
+#      - "subnet-00ebe1c97c2e536a8"
+#      - "subnet-0d8931c820002fa1e"
+#      - "subnet-0b8cd1b406b420b4f"
+#    PUBLIC:
+#      - "subnet-07d3b9c971047a3a4"
+#      - "subnet-01ce7a58a315621f4"
+#      - "subnet-065f25112df5b4f91"
 
 #DNS_SUFFIX: "<NEED_TO_BE_FILLED>"
 
-#VPC:
-#  CIDR: 10.15.0.0/16
-#  SUBNETS:
-#    PRIVATE:
-#      - 10.15.1.0/24
+VPC:
+  CIDR: 10.15.0.0/16
+  SUBNETS:
+    PRIVATE:
+      - 10.15.1.0/24
 #      - 10.15.3.0/24
 #      - 10.15.5.0/24
-#    PUBLIC:
-#      - 10.15.0.0/24
+    PUBLIC:
+      - 10.15.0.0/24
 #      - 10.15.2.0/24
 #      - 10.15.4.0/24
 
@@ -47,11 +47,11 @@ S3_BUCKET: "nokia-artifacts-ap-southeast-2"
 
 NODES:
   WORKERS:
-    DESIRED: 6
+    DESIRED: 3
     DISK_SIZE: 100
     INSTANCE_TYPE: "m5a.4xlarge" #c16 r32
   EDGES:
-    DESIRED: 3
+    DESIRED: 1
     DISK_SIZE: 50
     INSTANCE_TYPE: "m5a.2xlarge" #c8 r16
   BASTION:
@@ -63,6 +63,8 @@ WAF_RULES:
     IPSETS:
         - {"name": "nu-deploy-04" , "cidr": "52.62.76.122/32"}
         - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
+        - {"name": "Nokia Australia Sydney VPN" , "cidr": "135.245.190.0/27"}
+        - {"name": "Nokia USA Dallas VPN" , "cidr": "131.228.48.64/27"}
 
 # If proxy server is ued to access AWS
 #SSH_PROXY: '87.254.212.120:8080'
@@ -76,12 +78,16 @@ KUBERNETES_API_ACCESS_RULES:
   IPSETS:
       - {"name": "nu-deploy-04" , "cidr": "52.62.76.122/32"}
       - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
+      - {"name": "Nokia Australia Sydney VPN" , "cidr": "135.245.190.0/27"}
+      - {"name": "Nokia USA Dallas VPN" , "cidr": "131.228.48.64/27"}
 
 # Access to ALB/EC2 nodes
 CLUSTER_SECURITY_GROUP_RULES:
   IPSETS:
       - {"name": "nu-deploy-04" , "cidr": "52.62.76.122/32"}
       - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
+      - {"name": "Nokia Australia Sydney VPN" , "cidr": "135.245.190.0/27"}
+      - {"name": "Nokia USA Dallas VPN" , "cidr": "131.228.48.64/27"}
 
 #CREATE_PRIVATE_HOSTED_ZONE: "true"
 PRIVATE_HOSTED_ZONE: "true"
@@ -115,5 +121,3 @@ DEFAULT_VOLUME_TYPE: gp2
 CALICO_ENABLED: false
 
 SKIP_TAGS: "selinux,cis,calico,gatekeeper"
-####### BLOCK ADDED BY CSFPOPS #######
-############ END OF BLOCK ############
