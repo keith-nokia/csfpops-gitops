@@ -1,0 +1,123 @@
+OUTSIDE_ACCOUNT: "true"
+## AWS accound id used for deployment
+AWS_ACCOUNT_ID: "126494010021"
+AWS_REGION: "ap-southeast-2"
+
+## Create EFS File System
+EFS: "true"
+
+## Deploy cluster auto-scaler feature
+AUTOSCALING: "false"
+
+## This role must be created manually only when csfpops will be called from EC2 instance
+BASTION_IAM_ROLE: "service_ec2_bastion"
+## Roles must be created manually
+NODE_IAM_ROLE: "service_ec2_eksnode"
+CLUSTER_IAM_ROLE: "service_eks_cluster"
+
+# Use existing VPC, CDLK is on the same VPC
+#VPC:
+#  ID: "vpc-0e4d978a713c65ed1"
+#  SUBNETS:
+#    PRIVATE:
+#      - "subnet-00ebe1c97c2e536a8"
+#      - "subnet-0d8931c820002fa1e"
+#      - "subnet-0b8cd1b406b420b4f"
+#    PUBLIC:
+#      - "subnet-07d3b9c971047a3a4"
+#      - "subnet-01ce7a58a315621f4"
+#      - "subnet-065f25112df5b4f91"
+
+#DNS_SUFFIX: "<NEED_TO_BE_FILLED>"
+
+VPC:
+  CIDR: 10.15.0.0/16
+  SUBNETS:
+    PRIVATE:
+      - 10.15.1.0/24
+      - 10.15.3.0/24
+      - 10.15.5.0/24
+    PUBLIC:
+      - 10.15.0.0/24
+      - 10.15.2.0/24
+      - 10.15.4.0/24
+
+DNS_SUFFIX: "nokia-sandbox.com"
+S3_BUCKET: "nokia-artifacts-ap-southeast-2"
+
+NODES:
+  WORKERS:
+    DESIRED: 3
+    DISK_SIZE: 100
+    INSTANCE_TYPE: "m5a.4xlarge" #c16 r32
+  EDGES:
+    DESIRED: 1
+    DISK_SIZE: 50
+    INSTANCE_TYPE: "m5a.2xlarge" #c8 r16
+  BASTION:
+    INSTANCE_TYPE: "t3a.xlarge" #c4 r16
+
+# EIP's will be automatically added to WAF rules
+# Need to specify it if VPN will be used to access Cluster
+WAF_RULES:
+    IPSETS:
+        - {"name": "nu-deploy-04" , "cidr": "52.62.76.122/32"}
+        - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
+        - {"name": "Nokia Australia Sydney VPN" , "cidr": "135.245.190.0/27"}
+        - {"name": "Nokia USA Dallas VPN" , "cidr": "131.228.48.64/27"}
+
+# If proxy server is ued to access AWS
+#SSH_PROXY: '87.254.212.120:8080'
+#http_proxy: "http://87.254.212.120:8080"
+
+## Custom added ##
+#SKIP_TAGS: "autoscaling,efs,cis,selinux"
+
+# Access to EKS control plane
+KUBERNETES_API_ACCESS_RULES:
+  IPSETS:
+      - {"name": "nu-deploy-04" , "cidr": "52.62.76.122/32"}
+      - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
+      - {"name": "Nokia Australia Sydney VPN" , "cidr": "135.245.190.0/27"}
+      - {"name": "Nokia USA Dallas VPN" , "cidr": "131.228.48.64/27"}
+
+# Access to ALB/EC2 nodes
+CLUSTER_SECURITY_GROUP_RULES:
+  IPSETS:
+      - {"name": "nu-deploy-04" , "cidr": "52.62.76.122/32"}
+      - {"name": "Nokia HongKong VPN" , "cidr": "131.228.104.64/27"}
+      - {"name": "Nokia Australia Sydney VPN" , "cidr": "135.245.190.0/27"}
+      - {"name": "Nokia USA Dallas VPN" , "cidr": "131.228.48.64/27"}
+
+#CREATE_PRIVATE_HOSTED_ZONE: "true"
+PRIVATE_HOSTED_ZONE: "true"
+
+#KMS_S3_ARTIFACTS_KEY: "arn:aws:kms:ap-southeast-2:126494010021:key/ecfc76f9-0228-4bec-8035-7471492649d6"
+#KMS_CLUSTER_KEY: "arn:aws:kms:ap-southeast-2:126494010021:key/ecfc76f9-0228-4bec-8035-7471492649d6"
+#KMS_S3_CBUR_KEY: "arn:aws:kms:ap-southeast-2:126494010021:key/ecfc76f9-0228-4bec-8035-7471492649d6"
+
+ECR_ROOT_REPO: "nokia"
+HELM_S3_OBJECT: "charts"
+
+DEFAULT_VOLUME_TYPE: gp2
+
+#EBS_STORAGECLASS:
+#      - {name: "aws-ebs", default: true, fsType: "ext4", type: "gp2"}  # Do not change the name of this storage class
+#      - {name: "aws-gp3-ext4", fsType: "ext4", type: "gp3"}
+#      - {name: "aws-gp3-cmk", fsType: "ext4", type: "gp3", kmsKeyId: "ecfc76f9-0228-4bec-8035-7471492649d6"} # Storage class encrypted with customer provided KMS
+#      - {name: "aws-io1-ext4", fsType: "ext4", type: "io1"}
+#      - {name: "aws-io1-25-ext4", fsType: "ext4", type: "io1", iopsPerGB: "25"}
+#      - {name: "aws-io1-50-ext4", fsType: "ext4", type: "io1", iopsPerGB: "50"}
+#      - {name: "aws-gp2-xfs", fsType: "xfs", type: "gp2"}
+#      - {name: "aws-gp3-xfs", fsType: "xfs", type: "gp3"}
+#      - {name: "aws-io1-xfs", fsType: "xfs", type: "io1"}
+#      - {name: "aws-io1-25-xfs", fsType: "xfs", type: "io1", iopsPerGB: "25"}
+#      - {name: "aws-io1-50-xfs", fsType: "xfs", type: "io1", iopsPerGB: "50"}
+#      - {name: "aws-st1-xfs", fsType: "xfs", type: "st1"}
+#      - {name: "aws-sc1-xfs", fsType: "xfs", type: "sc1"}
+
+#EFS_ID: "nokia-aws-efs-id"
+
+CALICO_ENABLED: false
+
+SKIP_TAGS: "selinux,cis,calico,gatekeeper"
