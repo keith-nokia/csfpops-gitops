@@ -1,0 +1,48 @@
+
+[bastion]
+localhost ansible_host=localhost ansible_connection=local ansible_user=cloud-user
+
+[deployer]
+localhost ansible_host=localhost ansible_connection=local ansible_user=cloud-user
+
+
+[role_all]
+nokia-lab4-worker-10.15.1.80 ansible_host=i-049fe2a7f35653c84
+nokia-lab4-worker-10.15.3.51 ansible_host=i-04a32991b19af3b9a
+nokia-lab4-worker-10.15.5.68 ansible_host=i-0675833bf8ab09d7f
+nokia-lab4-edge-10.15.5.44 ansible_host=i-014db32e49d7afed6
+
+[role_worker]
+nokia-lab4-worker-10.15.1.80 ansible_host=i-049fe2a7f35653c84
+nokia-lab4-worker-10.15.3.51 ansible_host=i-04a32991b19af3b9a
+nokia-lab4-worker-10.15.5.68 ansible_host=i-0675833bf8ab09d7f
+
+[role_edge]
+nokia-lab4-edge-10.15.5.44 ansible_host=i-014db32e49d7afed6
+
+
+[k8s:children]
+role_all
+role_worker
+role_edge
+
+[k8s:vars]
+[platform:children]
+k8s
+bastion
+deployer
+
+[platform:vars]
+ansible_connection=community.aws.aws_ssm
+ansible_aws_ssm_region=ap-southeast-2
+ansible_aws_ssm_bucket_name=nokia-artifacts-ap-southeast-2
+ansible_aws_ssm_retries=20
+ansible_user="ssm-user"
+
+ENABLE_KEEPALIVED=false
+ENABLE_EGRESS=false
+ENABLE_EGRESS_LB=false
+INGRESS_SPLIT_ENABLED=false
+
+ALLOWED_CIDRS=192.168.0.0/16
+NETWORK_POLICIES_CIDR=192.168.0.0/16
