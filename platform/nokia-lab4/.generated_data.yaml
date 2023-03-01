@@ -1,5 +1,36 @@
-å:ú“ÒÛ€…¡+Å]ﬁ˚_Ï:Ó€·,ﬁü˚I∑ÂÃ∏Ø0Êm„U¡ÀY^$)_¨”ÿ≤ûŒÁ%5π>‚ﬁË–¬*√◊.±†µ ¶Æ!É&7ãpÕ^¿¬¯•âÆñö∞\_3Rê=Ó/…1ñ=‘ó=NIÉ+13UÌÖ≥ÓUó§≈D3aêíl–≥f-•È÷ê”¨0=?´ ]ÙıRZqLld	„Ìø£Ì`ø‚Lv®é}
-¯∆çè]s1,´1À¨Œ¥yÀUƒ„Ÿ0b–tq4í[÷÷ç;g√®H¶∑…ø˘És`ÄJÖA‹T`£„}ò1– Ô‚Z¿ı-gπÕa˚Î`é∂3Öe∏
-OÒjˆ0:*√£x·\6tÊ¥t>ÄQ‘ :&–„ﬂŸUæ_&ñu|åz`Å45“2e8{qAaô<jò˚rpwVƒÀ"(&‚!è)∂I/ÆÜq¶Ô%ãq<ßu´ûÇ!’t=öÎÂîqrâ∂;˜Ï$†˜Nó3r∫O.C˝¶–á!*y
-b{dùÄæ‹GÂQTì“ÅZøﬂrÁ9G*U˘ûº}|Á–
-èª∑ÔÛ©VÍXeÉYrfLûò@…›‡∂Û/˜≠û%€&£8K±6"BÂ‰÷cÈnﬂßLÛ™€0ÿBoí©œÈ¿r-Û+
+---
+
+CORE_SERVICES_SUBDOMAINS: False
+CORE_SERVICES_SUBDOMAINS_BACK_COMP_ENABLED: True
+
+NETWORK_STACK: ipv4_only
+
+
+
+K8S_API_SERVER_ENDPOINT: "https://3B06450BEE169F7F167BC84F90269445.gr7.ap-southeast-2.eks.amazonaws.com"
+LCM_HELM: 3
+HELM_VERSION: 3
+RWX_STORAGE_CLASS: aws-efs
+RWO_STORAGE_CLASS: aws-ebs
+CBUR_STORAGECLASS: aws-ebs
+DEFAULT_SC_RWX: aws-efs
+DEFAULT_SC_RWX_BACKUP: aws-efs
+DEFAULT_SC_RWO: aws-ebs
+CA_ISSUER_NAME: ca-issuer
+IMAGE_REGISTRY: 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
+DOCKER_REGISTRY: 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia
+
+LOCAL_INSTALLER_PASSWORD: "Friday123!"
+
+ADMINACCOUNT: "nokia-lab4-admin"
+
+CSFP_PLAYBOOK_IMAGE_REGISTRY: "126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
+CSFP_ADDONS_IMAGE_REGISTRY: "126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
+
+## DATA INJECTED FOR AF
+
+CLUSTER: "nokia-lab4"
+
+
+KUBE_DASHBOARD: True
+
