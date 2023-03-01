@@ -1,12 +1,3 @@
-PACKAGE: s3://nokia-artifacts-ap-southeast-2/uiv_base_profile_offline-22.9.1-65.tgz
-
-CONTEXT_USER: "nokia-lab4-admin"
-CONTEXT_PASSWORD: "Friday123!"
-CONTEXT_PROJECT: "nbn-project"
-
-REPOS:
-  - name: "s3-helm-repo"
-    url: "s3://nokia-artifacts-ap-southeast-2/charts"
-
-#IMPORTER_ARGUMENTS: "--upgrade --watchTimeout 1800 --bin ./ncm --project nbn-project --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
-IMPORTER_ARGUMENTS: "--instantiate --watchTimeout 1800 --bin ./ncm --project nbn-project --debug --skipOnboard --dregistry 126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
+Œ›÷žã•J-ÛÉÀ¤=èïƒÒ%eñÃW§ˆã!QK;ÞøÁÆž™íÁê€	ïäõtÕ°{|¬DH/î¦§ÜOD‰Ï™ÕtŸ¼jæu7Ùïå)‘Íê¼1‰®„ƒ“8Ë›`ß ”§j”ÒÊ9ó$zmU›—‰2~çVf¾+Ù¢ùÓvkÝ“9@±“aü™f–‡	lª–i8þuã€ý&aN.éHîB¥ïCL=ÈÌõx.×Þ»Êì]YøÓh(Á›Ù@N¢íÔg»üÌŽ1iDM/¶û@|)£W•Ó;õE_ÍŒäã.?×Ñ¨
+”ô£ZÎà-¹É.½À³1ã¸ízQh~Â!ïW”ÁdÍ¼Þ(ØNUKmQµ§ËÖª7E•)8FÈa–âÁÚ|n÷M‚)0³xÀhîv³~ñ ¾«wÀye,[EäÌlk‚³aÃ+ÅãÆå0
+¨6Ç>÷$)ÓÝ^V¹õÙ
