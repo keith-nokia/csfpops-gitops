@@ -1,4 +1,4 @@
-# File Creation Date 13/1/2023 3:09:43 PM
+# File Creation Date 1/3/2023 1:58:12 PM
 
 # This generated file is for UIV22 FP2206 release
 # Give a space after : when adding values. Example PRODUCT_NAME:abc is wrong, PRODUCT_NAME: abc is correct
@@ -45,8 +45,8 @@ DOCKER_REGISTRY: "126494010021.dkr.ecr.ap-southeast-2.amazonaws.com/nokia"
 
 HELM_REPOS:
   - name: "s3-helm-repo"
-    url: "s3://nokia-artifacts-ap-southeast-2/charts"
-    
+    url: "s3://nokia-artifacts-ap-southeast-2/charts" 
+
 # Kong 5.x configuration
 # This parameter should be false if UIV is deployed on CSFP FP3. Default is true.
 KONG5_ENABLED: true
@@ -101,10 +101,10 @@ IGNITE_SERVER_USERNAME:
 IGNITE_SERVER_PASSWORD: 
 
 # ENABLE/DISABLE API DOCUMENTATION FOR UIV. CAN BE CHANGED IF REQUIRED. BOOLEAN VALUES true/false
-SWAGGER_ENABLED: true
+SWAGGER_ENABLED: true 
 
 # UIV Backup-restore parameters. By default, Disabled in NON-HA MODE, enabled in HA MODE. CAN BE CHANGED IF REQUIRED
-BACKUP_ENABLED: true
+BACKUP_ENABLED: false
 
 # Below three parameters are considered only when backup is enabled - BACKUP_ENABLED: true
 # BACKUP_TYPE CAN BE local, AWS, Netbackup etc. Please check CBUR guide for supported backup providers
@@ -115,8 +115,19 @@ BACKUP_SCHEDULE: "0 0 * * *"
 BACKUP_COPIES_MAX: 3
 
 
-###### KAFKA EXTERNAL ACCESS
-KAFKA_EXTERNAL_ACCESS: false
+###### KAFKA EXTERNAL ACCESS CONFIG
+# To expose kafka broker service outside CSFP cluster, update the below section
+# set KAFKA_EXTERNAL_ACCESS value to 'true' to enable
+# Please make sure 3 consecuitive ports  from the START_PORT_RANGE_ON_EDGE_NODE are available for use in all Edge Nodes
+# Pre-requisite for this feature, user is expected to install the citm ingress controller.
+# And provide the configmap prefix name which the citm controller monitor
+# For eg: if the configmap naming convention is 'citmrelease-citm-ingress-tcp'
+# in CITM_RELEASE_NAME 'citmrelease-citm-ingress' needs to be provided
+# KEYCLOAK_INSTALLED_NAMESPACE should be the name of namespace where the Keycloak is installed. For eg: 'paas'
+KAFKA_EXTERNAL_ACCESS: true
+CITM_RELEASE_NAME: citm-compaas
+KEYCLOAK_INSTALLED_NAMESPACE: paas
+START_PORT_RANGE_ON_EDGE_NODE: 11000
 
 ###### KAFKA LOG RETENTION CONFIGS
 LogRetentionHours: "168"
@@ -355,3 +366,4 @@ UIV_ONBOARDING_MANAGER_POD_MEMORY_SIZE_REQ: 1Gi
 UIV_ONBOARDING_MANAGER_POD_MEMORY_SIZE_LIM: 2Gi
 UIV_ONBOARDING_MANAGER_POD_HEAP_MEMORY: "-Xms820m -Xmx1434m"
 UIV_ONBOARDING_MANAGER_REPLICAS: 1
+
