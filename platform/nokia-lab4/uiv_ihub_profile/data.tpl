@@ -124,10 +124,7 @@ BACKUP_COPIES_MAX: 3
 # For eg: if the configmap naming convention is 'citmrelease-citm-ingress-tcp'
 # in CITM_RELEASE_NAME 'citmrelease-citm-ingress' needs to be provided
 # KEYCLOAK_INSTALLED_NAMESPACE should be the name of namespace where the Keycloak is installed. For eg: 'paas'
-KAFKA_EXTERNAL_ACCESS: true
-CITM_RELEASE_NAME: citm-compaas
-KEYCLOAK_INSTALLED_NAMESPACE: paas
-START_PORT_RANGE_ON_EDGE_NODE: 11000
+KAFKA_EXTERNAL_ACCESS: false
 
 ###### KAFKA LOG RETENTION CONFIGS
 LogRetentionHours: "168"
