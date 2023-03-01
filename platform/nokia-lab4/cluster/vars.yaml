@@ -35,12 +35,12 @@ VPC:
   SUBNETS:
     PRIVATE:
       - 10.15.1.0/24
-      - 10.15.3.0/24
-      - 10.15.5.0/24
+#      - 10.15.3.0/24
+#      - 10.15.5.0/24
     PUBLIC:
       - 10.15.0.0/24
-      - 10.15.2.0/24
-      - 10.15.4.0/24
+#      - 10.15.2.0/24
+#      - 10.15.4.0/24
 
 DNS_SUFFIX: "nokia-sandbox.com"
 S3_BUCKET: "nokia-artifacts-ap-southeast-2"
