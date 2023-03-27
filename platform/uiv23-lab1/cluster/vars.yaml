@@ -48,7 +48,7 @@ S3_BUCKET: "nokia-artifacts-ap-southeast-2"
 
 NODES:
   WORKERS:
-    DESIRED: 3
+    DESIRED: 6
     DISK_SIZE: 100
     INSTANCE_TYPE: "m5a.4xlarge" #c16 r32
   EDGES:
@@ -121,10 +121,3 @@ DEFAULT_VOLUME_TYPE: gp2
 CALICO_ENABLED: false
 
 SKIP_TAGS: "selinux,cis,calico,efs"
-### BEGIN CSFPOPS MANAGED BLOCK ###
-CLUSTER_NAME: uiv23-lab1
-PLATFORM_NAME: uiv23-lab1
-INFRA_NAME: uiv23-lab1
-CLUSTER_TYPE: eks
-NO_CERT_MANAGER: false
-### END CSFPOPS MANAGED BLOCK ###
